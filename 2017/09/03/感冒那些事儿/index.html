@@ -14,6 +14,13 @@
 
 
 
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-flash.min.css?v=1.0.2" rel="stylesheet">
+
 
 
 
@@ -121,7 +128,7 @@
     root: '/',
     scheme: 'Muse',
     version: '5.1.2',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":true,"onmobile":true},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
@@ -192,7 +199,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">咦，hi</p>
+        <h1 class="site-subtitle" itemprop="description">咦，hi</h1>
       
   </div>
 
@@ -345,7 +352,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">感冒那些事儿</h1>
+          <h2 class="post-title" itemprop="name headline">感冒那些事儿</h2>
         
 
         <div class="post-meta">
@@ -363,7 +370,19 @@
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post modified&#58;</span>
+              
+              <time title="Post modified" itemprop="dateModified" datetime="2017-09-03T22:08:28-04:00">
+                2017-09-03
+              </time>
             
           </span>
 
@@ -621,6 +640,8 @@
 
   <aside id="sidebar" class="sidebar">
     
+      <div id="sidebar-dimmer"></div>
+    
     <div class="sidebar-inner">
 
       
@@ -644,7 +665,7 @@
               alt="leiger" />
           
             <p class="site-author-name" itemprop="name">leiger</p>
-            <p class="site-description motion-element" itemprop="description">偶尔你要想起我哦~</p>
+            <p class="site-description motion-element" itemprop="description"></p>
         </div>
 
         <nav class="site-state motion-element">
@@ -735,7 +756,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#关于感冒的三个真相"><span class="nav-number">1.</span> <span class="nav-text">关于感冒的三个真相</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五个结论"><span class="nav-number">2.</span> <span class="nav-text">五个结论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常见的药物成分"><span class="nav-number">3.</span> <span class="nav-text">常见的药物成分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#药物的选择"><span class="nav-number">4.</span> <span class="nav-text">药物的选择</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一些有用的tips"><span class="nav-number">5.</span> <span class="nav-text">一些有用的tips</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#关于感冒的三个真相"><span class="nav-text">关于感冒的三个真相</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五个结论"><span class="nav-text">五个结论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常见的药物成分"><span class="nav-text">常见的药物成分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#药物的选择"><span class="nav-text">药物的选择</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一些有用的tips"><span class="nav-text">一些有用的tips</span></a></li></ol></div>
             
 
           </div>
@@ -760,7 +781,7 @@
   &copy; 
   <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
-    <i class="fa fa-heart"></i>
+    <i class="fa fa-bolt"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">leiger</span>
 
@@ -783,6 +804,8 @@
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
         
       </div>
     
@@ -1235,6 +1258,21 @@
   
 
   
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
   
 
