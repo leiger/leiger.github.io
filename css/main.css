@@ -1935,7 +1935,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #09ff54;
+  background: #d60074;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2821,4 +2821,13 @@ embed {
 .footer {
   margin-top: 60px;
   border-top: 1px solid #eee;
+}
+.post-button .btn {
+  border-color: #222;
+  color: #222;
+  background: #fff;
+}
+.post-button .btn:hover {
+  color: #fff;
+  background: #222;
 }
