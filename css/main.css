@@ -1935,7 +1935,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #dfd533;
+  background: #ffb1ed;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2817,4 +2817,8 @@ embed {
 #rewardButton span:hover {
   color: #fff;
   background-color: #87daff;
+}
+.footer {
+  margin-top: 100px;
+  border-top: 1px solid #eee;
 }
