@@ -115,7 +115,7 @@
 <meta property="og:image" content="http://yoursite.com/images/network_principles/3.jpg">
 <meta property="og:image" content="http://yoursite.com/images/network_principles/4.jpg">
 <meta property="og:image" content="http://yoursite.com/images/network_principles/5.jpg">
-<meta property="og:updated_time" content="2017-12-04T05:25:36.735Z">
+<meta property="og:updated_time" content="2017-12-05T17:46:37.477Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="&quot;network principles&quot; 学习笔记之--数据链路层和局域网">
 <meta name="twitter:description" content="未完待续…">
@@ -498,7 +498,7 @@
 <ul>
 <li><p><strong>载波侦听</strong>（carrier sensing），即一个节点在传输前先听信道。若其他节点正在发，则等待一段随机的时间后再侦听信道。空闲了当然就可以发送啦。</p>
 </li>
-<li><p><strong>碰撞检测</strong>（collision detection），若同时发送，则同时停止。一个传输节点在传输时一直在监听信道，若检测到另一节点正在传送，则双方都停止传输。</p>
+<li><p><strong>碰撞检测</strong>（CSMA/CD collision detection），若同时发送，则同时停止。一个传输节点在传输时一直在监听信道，若检测到另一节点正在传送，则双方都停止传输。</p>
 </li>
 </ul>
 <h3 id="轮流协议"><a href="#轮流协议" class="headerlink" title="轮流协议"></a>轮流协议</h3><ol>
@@ -507,6 +507,7 @@
 <li><p><strong>令牌传递协议</strong>（token-passing protocol）。这个协议中并不存在主节点，一个特殊的<strong>令牌</strong>（token）在节点中传递。当节点想要发送一些帧并且持有令牌时才可发送到信道中，否则传递给下一个节点。但存在单点故障和节点忘记释放令牌的缺点。</p>
 </li>
 </ol>
+<hr>
 
       
     </div>
@@ -662,7 +663,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>

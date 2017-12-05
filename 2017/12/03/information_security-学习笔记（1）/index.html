@@ -110,10 +110,13 @@
 <meta property="og:site_name" content="leiger&#39;s blog">
 <meta property="og:description" content="未完待续…">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-12-04T21:59:14.587Z">
+<meta property="og:image" content="http://yoursite.com/images/information_security/1.jpg">
+<meta property="og:image" content="http://yoursite.com/images/information_security/2.jpg">
+<meta property="og:updated_time" content="2017-12-04T22:11:53.032Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="&quot;information security&quot; 学习笔记（1）">
 <meta name="twitter:description" content="未完待续…">
+<meta name="twitter:image" content="http://yoursite.com/images/information_security/1.jpg">
 
 
 
@@ -436,29 +439,32 @@
 <a id="more"></a>
 <hr>
 <p><strong>信息安全</strong>（information security），一直以来在我们生活中扮演着极其重要的角色。随着互联网的发展和普及，在网络上安全可靠的传输数据是十分必要且重要的。密码学，作为信息安全中最重要的技术，在我们睡觉醒来打开手机的那一刻起，我们就在使用着它。信息安全可以说和我们生活密切相关，已然成为不可分割的一部分。</p>
+<hr>
 <h3 id="Security-Rule"><a href="#Security-Rule" class="headerlink" title="Security Rule"></a>Security Rule</h3><ol>
 <li><p>在每一本安全书的开头，必然都会告知读者，<strong>don’t roll your own!!!</strong> 这仿佛在说，你个辣鸡好好学习其他人的算法就好，别整天想着整什么幺蛾子，你想出的算法，那必然是极其不可靠的，现在世界上已经有那么多成熟的经过历史验证的算法了，为啥不用呢？？</p>
 </li>
 <li><p>Kerckhoff’s principle。这家伙说，一个加密系统（cryptosystem）的安全性在于密钥（key）的保密，而不是其他人不知道这个算法。这也就是说，即使一个算法众人皆知，也需要保证安全性。</p>
 </li>
 </ol>
+<hr>
 <h3 id="Historical-Ciphers"><a href="#Historical-Ciphers" class="headerlink" title="Historical Ciphers"></a>Historical Ciphers</h3><p>在历史上，我们的祖先为了保证信息的安全，想出了各式各样奇奇怪怪有趣的算法：</p>
 <ol>
 <li>Caesar Cipher</li>
 </ol>
 <p>没错，这个算法就是著名的凯撒大帝发明的。这个算法很单纯，加密时将每个字母向后移3位，e.g: A -&gt; D。解密时向回移三位就好了。</p>
-<p>!()[/images/information_security/1.jpg]</p>
+<p><img src="/images/information_security/1.jpg" alt=""></p>
 <p>缺点在于，其他人一旦知道这个算法，这个算法就完全没有任何可靠性而言了。</p>
 <ol>
 <li>Vigenere Cipher</li>
 </ol>
 <p>这个算法发明于19世纪文艺复兴时期。这个算法加密用到了密码，这个密码可能只是一个单词或者一个短语。加密时，将原文和密码相加，之后将得到的结果模26取余。</p>
-<p>!()[/images/information_security/2.jpg]</p>
+<p><img src="/images/information_security/2.jpg" alt=""></p>
 <ol>
 <li>Enigma</li>
 </ol>
 <p>这是第二次世界大战德军使用的经典密码，具体的加解密过程就不再赘述了，有点小复杂，详情可见以下链接。</p>
 <p><a href="https://baike.baidu.com/item/%E6%81%A9%E5%B0%BC%E6%A0%BC%E7%8E%9B%E5%AF%86%E7%A0%81%E6%9C%BA/5691350" target="_blank" rel="external">Enigma介绍–百度百科</a></p>
+<hr>
 
       
     </div>
@@ -527,6 +533,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/12/05/network_principles-学习笔记-无线和移动网络/" rel="prev" title=""network principles" 学习笔记之--无线和移动网络">
+                "network principles" 学习笔记之--无线和移动网络 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -610,7 +620,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
