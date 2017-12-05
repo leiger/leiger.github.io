@@ -111,7 +111,7 @@
 <meta property="og:description" content="未完待续…">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/network_principles/7_1.jpg">
-<meta property="og:updated_time" content="2017-12-05T20:36:56.249Z">
+<meta property="og:updated_time" content="2017-12-05T20:45:14.339Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="&quot;network principles&quot; 学习笔记之--无线和移动网络">
 <meta name="twitter:description" content="未完待续…">
@@ -445,15 +445,15 @@
 </li>
 </ol>
 <hr>
-<h3 id="IEEE-802-11-Wireless-LAN"><a href="#IEEE-802-11-Wireless-LAN" class="headerlink" title="IEEE 802.11 Wireless LAN"></a>IEEE 802.11 Wireless LAN</h3><p><strong>IEEE 802.11 无线 LAN</strong> 在当今无疑成为了无线局域网中的赢家，它还有另外一个耳熟能详的称号：<strong>WiFi</strong>。它其实有好几套标准：802.11b、802.11a、802.11g、802.11n等等。其中<strong>802.11g</strong>是至今为止最为流行的技术。一些双模式（802.11a/g）和三模式等也在一些设备上提供使用。他们之间的差异在于所使用的频段和支持的最大速度有所差异。</p>
-<h4 id="802-11-LAN-architecture"><a href="#802-11-LAN-architecture" class="headerlink" title="802.11 LAN architecture"></a>802.11 LAN architecture</h4><p>802.11体系结构的基本构建模块是<strong>基本服务集</strong>（basic Service Set，BSS），一个BSS包含一个或多个<strong>接入点</strong>（Access Point，AP）的中央<strong>基站</strong>（base station）和多个无线主机（wireless host），它们连接到一个互联设备上（交换机或路由器），互联设备又连接到互联网上。</p>
+<h3 id="一、IEEE-802-11-Wireless-LAN"><a href="#一、IEEE-802-11-Wireless-LAN" class="headerlink" title="一、IEEE 802.11 Wireless LAN"></a>一、IEEE 802.11 Wireless LAN</h3><p><strong>IEEE 802.11 无线 LAN</strong> 在当今无疑成为了无线局域网中的赢家，它还有另外一个耳熟能详的称号：<strong>WiFi</strong>。它其实有好几套标准：802.11b、802.11a、802.11g、802.11n等等。其中<strong>802.11g</strong>是至今为止最为流行的技术。一些双模式（802.11a/g）和三模式等也在一些设备上提供使用。他们之间的差异在于所使用的频段和支持的最大速度有所差异。</p>
+<h4 id="1-802-11-LAN-architecture"><a href="#1-802-11-LAN-architecture" class="headerlink" title="1. 802.11 LAN architecture"></a>1. 802.11 LAN architecture</h4><p>802.11体系结构的基本构建模块是<strong>基本服务集</strong>（basic Service Set，BSS），一个BSS包含一个或多个<strong>接入点</strong>（Access Point，AP）的中央<strong>基站</strong>（base station）和多个<strong>无线主机</strong>（wireless host），它们连接到一个互联设备上（交换机或路由器），互联设备又连接到互联网上。</p>
 <p><img src="/images/network_principles/7_1.jpg" alt=""></p>
-<h4 id="Channels-association"><a href="#Channels-association" class="headerlink" title="Channels, association"></a>Channels, association</h4><p>在无线主机需要联网之前，需要和一个接入点有所关联。简单来说，我们手机需要在可用网络中查找到某一个WiFi信号（管理员配置的<strong>服务集标识符（Service Set Identifie, SSID）</strong>），连接。关联意味着手机和该无线站点之间创建了一个虚拟线路。可问题是，你的手机是如何知道哪个AP位于WiFi丛林（WiFi jungle）中的呢（哪些WiFi是可用的呢）？</p>
-<p>802.11要求，每个AP周期的发送信标帧（beacon frame），每个信标帧包括该AP的SSID和MAC地址。在802.11b中，2.4GHz-2.485GHz的频段会被分成11个部分重叠的信道。设备通过扫描该频段，接收到信标帧了解到AP之后，就可以选择一个AP用于关联了。</p>
-<p>扫描信道和监听信标帧的过程被称为被动扫描（passive scanning）。我们也可以进行主动扫描，主动扫描是无线主机向范围内的所有AP发送广播探测帧完成的，收到请求帧的AP用一个响应帧应答主机。主机可以在响应的AP中选择一个与之关联。在这里需要二次握手的过程，这样才能AP才知道是否选择了它嘛。</p>
+<h4 id="2-Channels-association"><a href="#2-Channels-association" class="headerlink" title="2. Channels, association"></a>2. Channels, association</h4><p>在无线主机需要联网之前，需要和一个接入点有所关联。简单来说，我们手机需要在可用网络中查找到某一个WiFi信号（管理员配置的<strong>服务集标识符（Service Set Identifie, SSID）</strong>），连接。关联意味着手机和该无线站点之间创建了一个虚拟线路。可问题是，你的手机是如何知道哪个AP位于<strong>WiFi丛林</strong>（WiFi jungle）中的呢（哪些WiFi是可用的呢）？</p>
+<p>802.11要求，每个AP周期的发送<strong>信标帧</strong>（beacon frame），每个信标帧包括该AP的SSID和MAC地址。在802.11b中，2.4GHz-2.485GHz的频段会被分成11个部分重叠的信道。设备通过扫描该频段，接收到信标帧了解到AP之后，就可以选择一个AP用于关联了。</p>
+<p>扫描信道和监听信标帧的过程被称为<strong>被动扫描</strong>（passive scanning）。我们也可以进行主动扫描，主动扫描是无线主机向范围内的所有AP发送广播探测帧完成的，收到请求帧的AP用一个响应帧应答主机。主机可以在响应的AP中选择一个与之关联。在这里需要二次握手的过程，这样才能AP才知道是否选择了它嘛。</p>
 <p>有些时候，我们需要向AP鉴别自身。在一些公司中，通过MAC地址的判断允许其接入网络；在我们生活中，常常采用用户名和密码的方式鉴别自身。</p>
 <p>作为用户，我们通常选择具有最强信号的信标帧，然而，这也许并不是最佳选择。因为该AP可能被其他附属主机（共享该AP的无线带宽）所过载。</p>
-<h4 id="802-11-MAC-Protocol-CSMA-CA"><a href="#802-11-MAC-Protocol-CSMA-CA" class="headerlink" title="802.11 MAC Protocol: CSMA/CA"></a>802.11 MAC Protocol: CSMA/CA</h4><p>若多个节点要同时传送数据，占用了同一个信道该怎么办呢？IEEE 802.11使用了带碰撞避免的CSMA（CSMA/CA）</p>
+<h4 id="3-802-11-MAC-Protocol-CSMA-CA"><a href="#3-802-11-MAC-Protocol-CSMA-CA" class="headerlink" title="3. 802.11 MAC Protocol: CSMA/CA"></a>3. 802.11 MAC Protocol: CSMA/CA</h4><p>若多个节点要同时传送数据，占用了同一个信道该怎么办呢？IEEE 802.11使用了<strong>带碰撞避免的CSMA</strong>（CSMA/CA）</p>
 
       
     </div>
@@ -692,7 +692,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#IEEE-802-11-Wireless-LAN"><span class="nav-text">IEEE 802.11 Wireless LAN</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#802-11-LAN-architecture"><span class="nav-text">802.11 LAN architecture</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Channels-association"><span class="nav-text">Channels, association</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#802-11-MAC-Protocol-CSMA-CA"><span class="nav-text">802.11 MAC Protocol: CSMA/CA</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、IEEE-802-11-Wireless-LAN"><span class="nav-text">一、IEEE 802.11 Wireless LAN</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-802-11-LAN-architecture"><span class="nav-text">1. 802.11 LAN architecture</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Channels-association"><span class="nav-text">2. Channels, association</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-802-11-MAC-Protocol-CSMA-CA"><span class="nav-text">3. 802.11 MAC Protocol: CSMA/CA</span></a></li></ol></li></ol></div>
             
 
           </div>
