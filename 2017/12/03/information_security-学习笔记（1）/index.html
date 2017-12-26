@@ -112,7 +112,7 @@
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/information_security/1.jpg">
 <meta property="og:image" content="http://yoursite.com/images/information_security/2.jpg">
-<meta property="og:updated_time" content="2017-12-04T22:11:53.032Z">
+<meta property="og:updated_time" content="2017-12-08T21:25:58.050Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="&quot;information security&quot; 学习笔记（1）">
 <meta name="twitter:description" content="未完待续…">
@@ -440,31 +440,36 @@
 <hr>
 <p><strong>信息安全</strong>（information security），一直以来在我们生活中扮演着极其重要的角色。随着互联网的发展和普及，在网络上安全可靠的传输数据是十分必要且重要的。密码学，作为信息安全中最重要的技术，在我们睡觉醒来打开手机的那一刻起，我们就在使用着它。信息安全可以说和我们生活密切相关，已然成为不可分割的一部分。</p>
 <hr>
-<h3 id="Security-Rule"><a href="#Security-Rule" class="headerlink" title="Security Rule"></a>Security Rule</h3><ol>
-<li><p>在每一本安全书的开头，必然都会告知读者，<strong>don’t roll your own!!!</strong> 这仿佛在说，你个辣鸡好好学习其他人的算法就好，别整天想着整什么幺蛾子，你想出的算法，那必然是极其不可靠的，现在世界上已经有那么多成熟的经过历史验证的算法了，为啥不用呢？？</p>
-</li>
-<li><p>Kerckhoff’s principle。这家伙说，一个加密系统（cryptosystem）的安全性在于密钥（key）的保密，而不是其他人不知道这个算法。这也就是说，即使一个算法众人皆知，也需要保证安全性。</p>
-</li>
-</ol>
+<h3 id="1-Security-Rule"><a href="#1-Security-Rule" class="headerlink" title="1. Security Rule"></a>1. Security Rule</h3><h4 id="a-don’t-roll-your-own"><a href="#a-don’t-roll-your-own" class="headerlink" title="a. don’t roll your own"></a>a. don’t roll your own</h4><p>在每一本安全书的开头，必然都会告知读者，<strong>don’t roll your own!!!</strong> 这仿佛在说，你个辣鸡好好学习其他人的算法就好，别整天想着整什么幺蛾子，你想出的算法，那必然是极其不可靠的，现在世界上已经有那么多成熟的经过历史验证的算法了，为啥不用呢？？</p>
+<h4 id="b-Kerckhoff’s-principle。"><a href="#b-Kerckhoff’s-principle。" class="headerlink" title="b. Kerckhoff’s principle。"></a>b. Kerckhoff’s principle。</h4><p>kerckhoff 这家伙说，一个加密系统（cryptosystem）的安全性在于密钥（key）的保密，而不是其他人不知道这个算法。这也就是说，即使一个算法众人皆知，也需要保证安全性。</p>
+<h4 id="c-Don’t-assume-something-has-a-certain-form-unless-you-check-it"><a href="#c-Don’t-assume-something-has-a-certain-form-unless-you-check-it" class="headerlink" title="c. Don’t assume something has a certain form unless you check it"></a>c. Don’t assume something has a certain form unless you check it</h4><p>不要假设某种东西有特定的模式，除非你去验证它。就如邓小平同志所言，实践是检验真理的唯一标准~</p>
 <hr>
-<h3 id="Historical-Ciphers"><a href="#Historical-Ciphers" class="headerlink" title="Historical Ciphers"></a>Historical Ciphers</h3><p>在历史上，我们的祖先为了保证信息的安全，想出了各式各样奇奇怪怪有趣的算法：</p>
-<ol>
-<li>Caesar Cipher</li>
-</ol>
+<h3 id="2-Historical-Ciphers"><a href="#2-Historical-Ciphers" class="headerlink" title="2. Historical Ciphers"></a>2. Historical Ciphers</h3><p>在历史上，我们的祖先为了保证信息的安全，想出了各式各样奇奇怪怪有趣的算法：</p>
+<p>a. Caesar Cipher</p>
 <p>没错，这个算法就是著名的凯撒大帝发明的。这个算法很单纯，加密时将每个字母向后移3位，e.g: A -&gt; D。解密时向回移三位就好了。</p>
 <p><img src="/images/information_security/1.jpg" alt=""></p>
 <p>缺点在于，其他人一旦知道这个算法，这个算法就完全没有任何可靠性而言了。</p>
-<ol>
-<li>Vigenere Cipher</li>
-</ol>
+<p>b. Vigenere Cipher</p>
 <p>这个算法发明于19世纪文艺复兴时期。这个算法加密用到了密码，这个密码可能只是一个单词或者一个短语。加密时，将原文和密码相加，之后将得到的结果模26取余。</p>
 <p><img src="/images/information_security/2.jpg" alt=""></p>
-<ol>
-<li>Enigma</li>
-</ol>
+<p>c. Enigma</p>
 <p>这是第二次世界大战德军使用的经典密码，具体的加解密过程就不再赘述了，有点小复杂，详情可见以下链接。</p>
 <p><a href="https://baike.baidu.com/item/%E6%81%A9%E5%B0%BC%E6%A0%BC%E7%8E%9B%E5%AF%86%E7%A0%81%E6%9C%BA/5691350" target="_blank" rel="external">Enigma介绍–百度百科</a></p>
 <hr>
+<h3 id="3-important-concept"><a href="#3-important-concept" class="headerlink" title="3. important concept"></a>3. important concept</h3><p>在进入现代信息安全编码之前，有一些重要概念需要有所认识。</p>
+<p>a. Brute-force attack</p>
+<p>b. Bits of security</p>
+<p>c. Negligible quantity</p>
+<p>d. Indistinguishability</p>
+<p>e. Pseudo-random functions</p>
+<p>f. Pseudo-random permutations</p>
+<p>g. Oracles</p>
+<ul>
+<li>Encryption Oracle</li>
+<li>Decryption Oracle</li>
+<li>Random Oracle</li>
+<li>Padding Oracle</li>
+</ul>
 
       
     </div>
@@ -524,8 +529,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/03/network_principles-学习笔记-数据链路层和局域网/" rel="next" title=""network principles" 学习笔记之--数据链路层和局域网">
-                <i class="fa fa-chevron-left"></i> "network principles" 学习笔记之--数据链路层和局域网
+              <a href="/2017/12/03/network_principles-学习笔记-广播链路/" rel="next" title=""network principles" 学习笔记之--广播链路">
+                <i class="fa fa-chevron-left"></i> "network principles" 学习笔记之--广播链路
               </a>
             
           </div>
@@ -620,7 +625,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -642,7 +647,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
@@ -707,7 +712,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Security-Rule"><span class="nav-text">Security Rule</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Historical-Ciphers"><span class="nav-text">Historical Ciphers</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Security-Rule"><span class="nav-text">1. Security Rule</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#a-don’t-roll-your-own"><span class="nav-text">a. don’t roll your own</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#b-Kerckhoff’s-principle。"><span class="nav-text">b. Kerckhoff’s principle。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#c-Don’t-assume-something-has-a-certain-form-unless-you-check-it"><span class="nav-text">c. Don’t assume something has a certain form unless you check it</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Historical-Ciphers"><span class="nav-text">2. Historical Ciphers</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-important-concept"><span class="nav-text">3. important concept</span></a></li></ol></div>
             
 
           </div>
