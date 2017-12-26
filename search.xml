@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA["Javascript学习笔记之--导论]]></title>
+    <title><![CDATA["Javascript"学习笔记之--导论]]></title>
     <url>%2F2017%2F12%2F25%2FJavaScript-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E5%AF%BC%E8%AE%BA%2F</url>
     <content type="text"><![CDATA[JavaScript究竟是一门怎样的语言呢？ 一、 什么是JavaScript语言呢？ JavaScript是一种轻量级的脚本语言所谓的脚本语言，指的是它不具备开发操作系统的能力，而是只用来编写控制其他大型应用程序的“脚本”。 JavaScript是一种嵌入式（embedded）语言语言本身提供的语法并不多，自身不提供I/O相关的API，都是靠宿主环境提供（浏览器，Node），因此JavaScript只适合嵌入更大型的应用程序环境，去调用宿主环境提供的底层的API。 JavaScript是一种“对象模型”语言从语法角度看，JavaScript是一种“对象模型”语言，然而却不是纯粹的“面向对象语言”，还支持其他编程范式（比如函数式编程）。这就导致几乎任何一个问题，JavaScript有多种解决方法。很灵活。 二、 JavaScript的组成部分JavaScript的核心语法相当精简，只有两个部分： 基本语法（操作符、控制结构、语句） 标准库（各种对象：Array、Date、Math等） 其他就是使用环境宿主提供的额外的API。在浏览器中，它提供了额外API可以分成三大类。 浏览器API：操作浏览器 DOM类：操作网页的各种元素 Web类：实现互联网的各种功能 若宿主是服务器，这提供操作系统的各种API，比如文件操作、网络通信API等。 三、 为什么学习JavaScript呢？ 操控浏览器的能力 浏览器平台化：可以调用许多系统功能，如操作本地文件、操作图片、调用摄像头和麦克风等！！！ Node.js 数据库操作。NoSQL数据库的概念本身就是在JSON（JavaScript Object Notation）格式的基础上诞生的，大部分NoSQL数据库允许JavaScript直接操作 跨移动平台！！！React Native 跨桌面平台！！！ 简单，与主流语言的相似性 四、 优点 灵活的语法，表达力强 可直接编译运行 事件驱动和非阻塞式设计。适合高并发环境，普通的硬件就可以承受很大的访问量 五、 缺点 设计缺陷，某些地方不合理 某些程序员感到，这语言不行啊，得发明新的语言，CoffeeScript、TypeScript、Dart等语言发明的目的，多多少少都有这个因素]]></content>
       <categories>
