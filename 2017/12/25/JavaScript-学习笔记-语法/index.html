@@ -86,7 +86,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="network," />
+  <meta name="keywords" content="JavaScript," />
 
 
 
@@ -102,24 +102,18 @@
 
 
 
-<meta name="description" content="在一条信道上，多个节点都想要传输数据，这时候该怎么办呢？">
-<meta name="keywords" content="network">
+<meta name="description" content="其实，JavaScript语法就那么点东西…">
+<meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="&quot;network principles&quot; 学习笔记之--广播链路">
-<meta property="og:url" content="http://yoursite.com/2017/12/03/network_principles-学习笔记-广播链路/index.html">
+<meta property="og:title" content="&quot;Javascript&quot;学习笔记之--语法">
+<meta property="og:url" content="http://yoursite.com/2017/12/25/JavaScript-学习笔记-语法/index.html">
 <meta property="og:site_name" content="leiger&#39;s blog">
-<meta property="og:description" content="在一条信道上，多个节点都想要传输数据，这时候该怎么办呢？">
+<meta property="og:description" content="其实，JavaScript语法就那么点东西…">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://yoursite.com/images/network_principles/1.jpg">
-<meta property="og:image" content="http://yoursite.com/images/network_principles/2.jpg">
-<meta property="og:image" content="http://yoursite.com/images/network_principles/3.jpg">
-<meta property="og:image" content="http://yoursite.com/images/network_principles/4.jpg">
-<meta property="og:image" content="http://yoursite.com/images/network_principles/5.jpg">
-<meta property="og:updated_time" content="2017-12-26T03:39:54.069Z">
+<meta property="og:updated_time" content="2018-01-05T03:10:41.731Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="&quot;network principles&quot; 学习笔记之--广播链路">
-<meta name="twitter:description" content="在一条信道上，多个节点都想要传输数据，这时候该怎么办呢？">
-<meta name="twitter:image" content="http://yoursite.com/images/network_principles/1.jpg">
+<meta name="twitter:title" content="&quot;Javascript&quot;学习笔记之--语法">
+<meta name="twitter:description" content="其实，JavaScript语法就那么点东西…">
 
 
 
@@ -149,13 +143,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/12/03/network_principles-学习笔记-广播链路/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/12/25/JavaScript-学习笔记-语法/"/>
 
 
 
 
 
-  <title>"network principles" 学习笔记之--广播链路 | leiger's blog</title>
+  <title>"Javascript"学习笔记之--语法 | leiger's blog</title>
   
 
 
@@ -336,7 +330,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/03/network_principles-学习笔记-广播链路/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/25/JavaScript-学习笔记-语法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="leiger">
@@ -353,7 +347,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">"network principles" 学习笔记之--广播链路</h2>
+          <h2 class="post-title" itemprop="name headline">"Javascript"学习笔记之--语法</h2>
         
 
         <div class="post-meta">
@@ -365,8 +359,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-03T21:11:08-05:00">
-                2017-12-03
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-25T22:11:00-05:00">
+                2017-12-25
               </time>
             
 
@@ -407,8 +401,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/12/03/network_principles-学习笔记-广播链路/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2017/12/03/network_principles-学习笔记-广播链路/" itemprop="commentsCount"></span>
+                <a href="/2017/12/25/JavaScript-学习笔记-语法/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2017/12/25/JavaScript-学习笔记-语法/" itemprop="commentsCount"></span>
                 </a>
               </span>
               <!--/noindex-->
@@ -437,76 +431,214 @@
       
 
       
-        <blockquote class="blockquote-center"><p>在一条信道上，多个节点都想要传输数据，这时候该怎么办呢？</p>
+        <blockquote class="blockquote-center"><p>其实，JavaScript语法就那么点东西…</p>
 </blockquote>
 <a id="more"></a>
 <hr>
-<p>在计算机网络中，有两种网络链路：<strong>点对点链路</strong>（point-to-point link）、<strong>广播链路</strong>（broadcast link）。</p>
-<p>其中的广播链路，目的是为了让不同的的<strong>节点</strong>（nodes）能够使用同一条广播信道。然而，多个节点在同一链路中进行数据传输，可能会发生信号<strong>碰撞</strong>（collision），为了解决这一的问题，需要通过<strong>多路访问协议</strong>（multiple access protocol）来规范节点在共享广播信道上的传输行为。</p>
-<p><img src="/images/network_principles/1.jpg" alt=""></p>
-<hr>
-<p>理想情况下，我们希望一条具有R bps速率的广播信道有以下特征：</p>
-<ol>
-<li><p>在只有一个节点发送数据时，该节点具有<strong>R bps</strong>的吞吐量</p>
-</li>
-<li><p>在M个节点发送数据时，每个节点的吞吐量为<strong>R/M bps</strong></p>
-</li>
-<li><p>协议是<strong>分散</strong>的，不会因为其中一个节点的崩溃而影响整个系统；同时，不需要数据同步，否则就是不分散的（例如之后会提到的时隙ALOHA）</p>
-</li>
-<li><p>协议是<strong>简单</strong>的</p>
-</li>
-</ol>
-<hr>
-<p>然而，事情远没有想象中的那么简单。在现实生活中，已实现的协议或多或少都有一些缺陷。我们可以将已实现的各种多路访问协议划分成三类：</p>
-<ol>
-<li><p>信道划分协议（channel partitioning protocol）</p>
-</li>
-<li><p>随机接入协议（random access protocol）</p>
-</li>
-<li><p>轮流协议（taking-turns protocol）</p>
-</li>
-</ol>
-<hr>
-<h3 id="信道划分协议"><a href="#信道划分协议" class="headerlink" title="信道划分协议"></a>信道划分协议</h3><p>信道划分协议就是把信道分成小片，之后再把每片的资源分配给不同的节点，这里的小片可以是时间、频率等。</p>
-<ol>
-<li><strong>时分多路复用</strong>（time division multiple access，TDMA），将时间划分成<strong>时间帧</strong>（frame），并进一步划分每个时间帧为N个<strong>时隙</strong>（slot），然后把每个时隙分配给N个节点中的一个</li>
-</ol>
-<p><img src="/images/network_principles/2.jpg" alt=""></p>
-<ol>
-<li><strong>频分多路复用</strong>（frequency division multiple access，FDMA），将R bps的信道划分成N个频段，每一频段具有R/N带宽，然后把每个频率分配给N个节点中的一个</li>
-</ol>
-<p><img src="/images/network_principles/3.jpg" alt=""></p>
-<p>这两者大同小异，主要的缺陷在于：节点的发送速率被限制，即使只有一个节点</p>
-<h3 id="随机接入协议"><a href="#随机接入协议" class="headerlink" title="随机接入协议"></a>随机接入协议</h3><p>在随机协议中，一个传输节点是以整个信道的全部速率进行发送。当发生碰撞时，发生碰撞的节点反复的发送它的帧（不必立刻重发，独立产生随机重发时延），直到该帧无碰撞的通过为止。</p>
-<ol>
-<li>时隙ALOHA（slotted ALOHA）</li>
-</ol>
-<p>这是最简单的随机接入协议。我们假设所有帧的大小都是相同的、时间被划分成同样大小的时隙（传输一帧的时间），并且所有的节点只能在时隙开始时传输。</p>
-<p><img src="/images/network_principles/4.jpg" alt=""></p>
-<p>若没有发生碰撞，节点可以在下一个时隙发送新帧；否则以p概率重传，直到成功。</p>
-<p>我们可以计算下该方式的最大效率，计算过程省略…结论是<strong>1/e</strong> = 0.37，其实效率并不高。除此之外，另一个问题在于节点是需要同步的。需要知道时隙开始的时间，需要在时隙结束前检测到是否发生碰撞事件。</p>
-<ol>
-<li>纯ALOHA（pure ALOHA）</li>
-</ol>
-<p>这是一个非时隙、完全分散的协议。当新的一帧首次到来时，节点立刻将该帧完整的传输进广播信道。若受到碰撞，则立即以概率p重传该帧，否则等待一个帧传输时间。在等待结束之后，以概率p该帧，1-p保持空闲。</p>
-<p><img src="/images/network_principles/5.jpg" alt=""></p>
-<p>这样的传输效率为<strong>1/2e</strong>，为时隙ALOHA的一半。</p>
-<ol>
-<li>载波侦听多路访问（carrier sense multiple access, CSMA）</li>
-</ol>
-<p>主要的两个规则：</p>
-<ul>
-<li><p><strong>载波侦听</strong>（carrier sensing），即一个节点在传输前先听信道。若其他节点正在发，则等待一段随机的时间后再侦听信道。空闲了当然就可以发送啦。</p>
-</li>
-<li><p><strong>碰撞检测</strong>（CSMA/CD collision detection），若同时发送，则同时停止。一个传输节点在传输时一直在监听信道，若检测到另一节点正在传送，则双方都停止传输。</p>
+<h3 id="一、-基本语法"><a href="#一、-基本语法" class="headerlink" title="一、 基本语法"></a>一、 基本语法</h3><h4 id="1-变量"><a href="#1-变量" class="headerlink" title="1. 变量"></a>1. 变量</h4><ul>
+<li>变量的申明和赋值是两个步骤，只不过我们一般写到了一起。</li>
+<li>JavaScript是一种<strong>动态类型语言</strong>，也就是说，变量的类型没有限制</li>
+<li><strong>变量提升</strong>（hoisting）：JavaScript会扫描整个函数体的语句，把所有申明的变量提升到函数顶部</li>
+<li><strong>标识符</strong>（identifier）：大小写英文，数字，$，_ 的组合，不能数字开头，不能是关键字，区分大小写</li>
+<li>var作用域是<strong>函数体</strong>，并不是必须用var申明</li>
+<li>在for等语句块中定义局部作用域的变量得使用ES6的中<strong>let</strong></li>
+<li>常量可以全部大写来表示，ES6中有<strong>const</strong></li>
+<li>不在函数体内的变量就有全局作用域。JavaScript的全局作用域被绑定到window（全局对象）的一个属性</li>
+<li>在函数内部，没有用var申明的变量，也是全局变量</li>
+<li>为了避免顶层函数的命名冲突，可以将自己的所有变量和函数绑定到一个全局变量中，JQuery就是这么做的</li>
+</ul>
+<h4 id="2-区块："><a href="#2-区块：" class="headerlink" title="2. 区块："></a>2. 区块：</h4><ul>
+<li>大括号包起来的</li>
+<li>在ES6中编写有一定意义（let, const是块级作用域）</li>
+</ul>
+<h4 id="3-三元运算符："><a href="#3-三元运算符：" class="headerlink" title="3. 三元运算符："></a>3. 三元运算符：</h4><ul>
+<li>？：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(condition) ? expr1 : expr2</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="轮流协议"><a href="#轮流协议" class="headerlink" title="轮流协议"></a>轮流协议</h3><ol>
-<li><p><strong>轮询协议</strong>（polling protocol）要求节点之一成为主节点，主节点以循环的方式<strong>轮询</strong>（poll）每个节点。优势在于消除了随机接入的碰撞和空时隙，效率更高。坏处在于引入了轮询时延，并且在单点故障时会对系统造成影响。</p>
+<h4 id="4-break和continue"><a href="#4-break和continue" class="headerlink" title="4. break和continue:"></a>4. break和continue:</h4><ul>
+<li>break用于终止跳出循环</li>
+<li>continue用于终止本轮循环，返回循环结构的头部</li>
+<li>若是多重循环，不带参数的break和continue都只针对最内层的循环</li>
+</ul>
+<h4 id="5-标签（label）："><a href="#5-标签（label）：" class="headerlink" title="5. 标签（label）："></a>5. 标签（label）：</h4><ul>
+<li>标签相当于定位符，用于跳转到程序的任意位置<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Label：</div><div class="line">    statement</div></pre></td></tr></table></figure>
 </li>
-<li><p><strong>令牌传递协议</strong>（token-passing protocol）。这个协议中并不存在主节点，一个特殊的<strong>令牌</strong>（token）在节点中传递。当节点想要发送一些帧并且持有令牌时才可发送到信道中，否则传递给下一个节点。但存在单点故障和节点忘记释放令牌的缺点。</p>
+</ul>
+<hr>
+<h3 id="二、-数据类型"><a href="#二、-数据类型" class="headerlink" title="二、 数据类型"></a>二、 数据类型</h3><p>JavaScript一共有七种数据类型，在ES5标准中有六种，它们分别是：</p>
+<ul>
+<li>Number</li>
+<li>String</li>
+<li>Boolean</li>
+<li>Undefined</li>
+<li>Null</li>
+<li>Object</li>
+</ul>
+<hr>
+<h3 id="三、-Number"><a href="#三、-Number" class="headerlink" title="三、 Number"></a>三、 Number</h3><ul>
+<li><p>所有数字都是以64位浮点数形式存储的，即使整数也是如此</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1===1.0</div></pre></td></tr></table></figure>
 </li>
-</ol>
+<li><p>浮点数不是精确的值,应该计算他们的之差的绝对值，看是否小于某个阈值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">0.1 + 0.2 === 0.3  //false</div><div class="line">Math.abs(1/3 - (1 - 2/3)) &lt; 0.0000001</div></pre></td></tr></table></figure>
+</li>
+<li><p>JavaScript提供的数值范围有限，太大返回<strong>Infinity</strong>。Infinity有正负之分，两者不相等</p>
+</li>
+<li>各种进制JavaScript最终都会转成10进制</li>
+<li>NaN（Not a number）,主要出现在将字符串解析成数字出错的场合。NaN不等于任何值，包括它本身。用<strong>isNaN(NaN)</strong>来判断，但是得注意非数字都是返回true</li>
+<li>0/0返回NaN，非0数值除以0返回Infinity</li>
+<li><p>parseInt(‘123’)用于将字符串转为整数。</p>
+<ul>
+<li><p>这个是一个个字符依次转换，遇到不能转的返回已经转好的部分</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">parseInt(&apos;8a&apos;) //8</div></pre></td></tr></table></figure>
+</li>
+<li><p>不能转，则返回NaN。</p>
+</li>
+</ul>
+</li>
+<li>对于那些会自动转为科学计数法的数字，parseInt会将科学计数法表示方法视为字符串，结果诡异<ul>
+<li>parseInt(‘1000’, 16)的第二个参数默认为10，其他可以进行进制转换，返回结果是10进制的<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">parseFloat(&apos;3.14&apos;)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="四、-String"><a href="#四、-String" class="headerlink" title="四、 String"></a>四、 String</h3><ul>
+<li>单引号中用单引号，要加<strong>\</strong>来转义</li>
+<li>转义字符各种神奇</li>
+<li>字符串可以视为字符数组，因此可以使用数组的方括号运算符<strong>s[0]</strong></li>
+<li>字符串是只读的，改变数组的方法对它无效</li>
+<li><strong>.length</strong>返回字符串的长度，无法改变</li>
+<li>JavaScript使用Unicode字符集存储，并且还允许在程序中使用Unicode编号表示字符，即写成\uxxxx形式</li>
+<li>Base64转码：一种编码方式，可以将任意字符转成可打印字符<ul>
+<li>btoa(): 字符串或二进制值转为Base64编码</li>
+<li>atob(): Base64编码转为原来的编码</li>
+</ul>
+</li>
+<li>ES6中的多行字符串<strong>``</strong></li>
+<li>ES6中的模板字符串var message = <code>你好，${name}</code>;<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">S.toUpperCase(); s.toLowerCase()</div><div class="line">S.indexOf(&apos;hello&apos;) 没有返回-1</div><div class="line">S.substring(0, 5)  //substring都是小写的</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h3 id="五、-Boolean"><a href="#五、-Boolean" class="headerlink" title="五、 Boolean"></a>五、 Boolean</h3><ul>
+<li>Undefined，null，false，0，NaN，“”自动转化为false</li>
+<li>空对象和空数组对应的布尔值是true</li>
+<li>true和false都是小写的</li>
+</ul>
+<hr>
+<h3 id="六、-Null"><a href="#六、-Null" class="headerlink" title="六、 Null"></a>六、 Null</h3><ul>
+<li>和undefined超级像，typeof的时候是object</li>
+</ul>
+<hr>
+<h3 id="七、-Object"><a href="#七、-Object" class="headerlink" title="七、 Object"></a>七、 Object</h3><h4 id="1-狭义的Object"><a href="#1-狭义的Object" class="headerlink" title="1. 狭义的Object"></a>1. 狭义的Object</h4><ul>
+<li>创建object有三种办法</li>
+<li>键名为数字会自动转为字符串，键名不符合标识条件，要加上引号</li>
+<li>如果一个属性（property）的值为函数，成这个属性为方法，像函数一样调用</li>
+<li>对于对象而言，指向同一地址的两个变量，修改一个变量，另一个也会更改</li>
+<li>读取属性：<ul>
+<li>点运算符</li>
+<li>括号运算符，键名需要放在引号里面，否则会被当做变量处理</li>
+</ul>
+</li>
+<li>在浏览器环境中，所有全局变量都是window对象的属性</li>
+<li>查看一个对象本身的所有属性，可以使用Object.keys方法</li>
+<li>delete用于删除对象的属性，删除成功后返回true</li>
+<li>in运算符用于检查对象是否包含某个属性，如果包含就返回true。<ul>
+<li>若直接用window.x来判断，则可能不对，因为x的值若对应的是空字符串等就无法得到正常结果</li>
+<li>in不能识别对象是继承的属性还是本身的属性，若需要识别自身的属性使用hasOwnProperty<br>For…in循环用来遍历一个对象的全部属性，不仅遍历自身的，还遍历继承的属性。但是要求这些对象是可遍历的属性，会跳过不可遍历的属性</li>
+</ul>
+</li>
+</ul>
+<h4 id="2-Array"><a href="#2-Array" class="headerlink" title="2. Array"></a>2. Array</h4><ul>
+<li>typeof运算符认为数组的类型就是对象</li>
+<li><strong>Object.keys(arr)</strong>返回的是数组的键名，就是0、1、2..</li>
+<li>length属性，将数组清空的一个办法是将length属性设为0</li>
+<li>类似数组的对象（array-like object）本质上还是对象，只是所有的键名都是正整数，有length属性，但是这个length属性不是动态值。包括函数arguments对象，大多数DOM元素集，还有字符串</li>
+<li>In运算符适用于对象，也适用于数组</li>
+<li><p>数组遍历可以用for…in（会遍历到非整数键），推荐使用for循环或者forEach方法</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Colors.forEach(function(color)&#123; console.log(color); &#125;)</div></pre></td></tr></table></figure>
+</li>
+<li><p>使用delete命令删除一个数组成员，会形成空位，但不会影响length属性</p>
+</li>
+<li>Arr[1] = 1  //和字符串不同，对超出范围的索引赋值也会改变array的大小</li>
+<li>Arr.indexOf(10)</li>
+<li>Arr.slice(0, 3)  //对应String的substring()版本，返回一个新的array</li>
+<li>末尾操作 arr.push(1, 2), arr.pop()</li>
+<li>开头操作 arr.unshift(1, 2), arr.shift()</li>
+<li>Arr.sort()  //白痴排序</li>
+<li>Arr.reverse()</li>
+<li>Arr.spice(2, 3, ‘Google’, ‘Facebook’) //万能方法，删除+添加</li>
+<li>Arr.concat([1, 2, 3])  //连接两个array，返回一个新的arr，没有修改原来的</li>
+<li>Arr.join(‘-‘)  //把当前array的每个元素都用指定的字符串连接起来，返回连接后的字符串</li>
+<li>多维数组</li>
+</ul>
+<h4 id="3-function"><a href="#3-function" class="headerlink" title="3. function"></a>3. function</h4><ul>
+<li><p>函数的声明</p>
+<ul>
+<li><p>function命令 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">function print(s)&#123;console.log(s)&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>函数表达式，也就是匿名函数。若这个函数加一个函数名，则这个函数名只能在函数体中使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var print = function(s)&#123;console.log(s)&#125;;</div></pre></td></tr></table></figure>
+</li>
+<li><p>若函数重复声明，后面的会覆盖前面的</p>
+</li>
+</ul>
+</li>
+<li>函数名的提升<ul>
+<li>JavaScript引擎<strong>将函数名视为变量名</strong>，采用function命令声明函数时，整个函数会像变量声明一样，被提升到代码头部。采用赋值语句定义时会报错</li>
+</ul>
+</li>
+<li>函数的属性和方法<ul>
+<li>name属性，返回的就是function关键字之后的那个函数名，匿名函数返回空字符串</li>
+<li>length属性，返回定义时参数的个数，无论输入了多少个参数</li>
+</ul>
+</li>
+<li>函数作用域<ul>
+<li>全局作用域，变量在整个程序中一直存在，所有地方都可以读取；函数作用域，变量只能在函数内部存在</li>
+<li>函数内部变量提升</li>
+</ul>
+</li>
+<li>传递方式<ul>
+<li>函数参数若是原始类型的值（数字、字符串、布尔值），传递方式是传值传递，在函数体内修改参数值，不会影响到函数外部</li>
+<li>但是，函数参数是复合类型的值（数组、对象、其他函数），传递方式是传址传递，会影响到原始值。对象赋新值不会影响</li>
+</ul>
+</li>
+<li>arguments对象<ul>
+<li><strong>arguments</strong>对象包含了函数运行时的所有参数，它是一个类似数组的对象，在非箭头函数中使用</li>
+<li>这是一个默认参数，直接使用即可</li>
+</ul>
+</li>
+<li>闭包<ul>
+<li>闭包就是通过在函数中定义函数，来读取父函数内部的变量，这是由于函数作用域决定的</li>
+<li>闭包的好处：读取函数内部的变量，让这些变量始终保存在内存中，封装对象的私有属性和私有方法</li>
+</ul>
+</li>
+<li><p>立即调用函数表达式</p>
+<ul>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(function()&#123; &#125;());  (function()&#123;&#125;)();</div></pre></td></tr></table></figure>
+</li>
+<li><p>通常情况下，只对匿名函数使用立即执行的函数表达式</p>
+</li>
+</ul>
+</li>
+<li>目的：不必为函数命名，避免了污染全局变量；封装一些外部无法读取的私有变量</li>
+</ul>
+<hr>
+<h3 id="八、-确定数据类型的方法"><a href="#八、-确定数据类型的方法" class="headerlink" title="八、 确定数据类型的方法"></a>八、 确定数据类型的方法</h3><ul>
+<li>typeof运算符<ul>
+<li>函数返回function</li>
+<li>undefined返回undefined：这点可用于检查变量是否被申明 typeof v</li>
+<li>Array，object，null返回object</li>
+</ul>
+</li>
+<li>instanceof运算符<ul>
+<li>可以用于区分array和object</li>
+<li>o instanceof Array</li>
+</ul>
+</li>
+<li>Object.prototype.toString方法</li>
+</ul>
 <hr>
 
       
@@ -554,7 +686,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/network/" rel="tag"># network</a>
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
           
         </div>
       
@@ -567,8 +699,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/03/information_security-学习笔记（1）/" rel="next" title=""information security" 学习笔记（1）">
-                <i class="fa fa-chevron-left"></i> "information security" 学习笔记（1）
+              <a href="/2017/12/25/JavaScript-学习笔记-导论/" rel="next" title=""Javascript"学习笔记之--导论">
+                <i class="fa fa-chevron-left"></i> "Javascript"学习笔记之--导论
               </a>
             
           </div>
@@ -576,10 +708,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/12/05/network_principles-学习笔记-无线和移动网络/" rel="prev" title=""network principles" 学习笔记之--无线和移动网络">
-                "network principles" 学习笔记之--无线和移动网络 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -750,7 +878,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#信道划分协议"><span class="nav-text">信道划分协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#随机接入协议"><span class="nav-text">随机接入协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#轮流协议"><span class="nav-text">轮流协议</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、-基本语法"><span class="nav-text">一、 基本语法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-变量"><span class="nav-text">1. 变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-区块："><span class="nav-text">2. 区块：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-三元运算符："><span class="nav-text">3. 三元运算符：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-break和continue"><span class="nav-text">4. break和continue:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-标签（label）："><span class="nav-text">5. 标签（label）：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、-数据类型"><span class="nav-text">二、 数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、-Number"><span class="nav-text">三、 Number</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、-String"><span class="nav-text">四、 String</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五、-Boolean"><span class="nav-text">五、 Boolean</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#六、-Null"><span class="nav-text">六、 Null</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#七、-Object"><span class="nav-text">七、 Object</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-狭义的Object"><span class="nav-text">1. 狭义的Object</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Array"><span class="nav-text">2. Array</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-function"><span class="nav-text">3. function</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#八、-确定数据类型的方法"><span class="nav-text">八、 确定数据类型的方法</span></a></li></ol></div>
             
 
           </div>
@@ -897,7 +1025,7 @@
 		_hcwp.push({widget:"Bloggerstream", widget_id: 95138, selector:".hc-comment-count", label: "{\%COUNT%\}" });
 
 		
-		_hcwp.push({widget:"Stream", widget_id: 95138, xid: "2017/12/03/network_principles-学习笔记-广播链路/"});
+		_hcwp.push({widget:"Stream", widget_id: 95138, xid: "2017/12/25/JavaScript-学习笔记-语法/"});
 		
 
 		(function() {
