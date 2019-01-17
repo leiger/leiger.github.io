@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.4.1" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/setting/favicon/thunderbolt_medium.png?v=6.4.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/setting/favicon/thunderbolt_medium.png?v=6.4.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/setting/favicon/thunderbolt_small.png?v=6.4.1">
+
+
+  <link rel="mask-icon" href="/images/setting/favicon/thunderbolt_medium.png?v=6.4.1" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.4.1',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="A good foundation is very important!==">
+<meta name="keywords" content="JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript Summary">
+<meta property="og:url" content="http://leiger.me/2018/12/09/JavaScript-Summary/index.html">
+<meta property="og:site_name" content="LEIGER">
+<meta property="og:description" content="A good foundation is very important!==">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-01-16T23:42:34.255Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript Summary">
+<meta name="twitter:description" content="A good foundation is very important!==">
+
+
+
+
+
+
+  <link rel="canonical" href="http://leiger.me/2018/12/09/JavaScript-Summary/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>JavaScript Summary | LEIGER</title>
+  
+
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?4208e2967dbc50e800d61d4b88bc1a21";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">LEIGER</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">BE WITH YOU</p>
+      
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archives<span class="badge">23</span></a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />Categories<span class="badge">8</span></a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />Tags<span class="badge">20</span></a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />About</a>
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://leiger.me/2018/12/09/JavaScript-Summary/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="leiger">
+      <meta itemprop="description" content="Nowhere to Place Youth">
+      <meta itemprop="image" content="/images/setting/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LEIGER">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">JavaScript Summary
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-12-09 18:22:02" itemprop="dateCreated datePublished" datetime="2018-12-09T18:22:02-05:00">2018-12-09</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/web/" itemprop="url" rel="index"><span itemprop="name">web</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote class="blockquote-center"><p>A good foundation is very important!==</p>
+</blockquote>
+<a id="more"></a>
+<p><a href="https://github.com/airbnb/javascript" target="_blank" rel="noopener">Airbnb JavaScript Style Guide</a></p>
+<h4 id="A-Global-Object"><a href="#A-Global-Object" class="headerlink" title="A. Global Object"></a>A. Global Object</h4><ul>
+<li>browser: window</li>
+<li>node: grobal</li>
+</ul>
+<hr>
+<h4 id="B-Control-Flow"><a href="#B-Control-Flow" class="headerlink" title="B. Control Flow"></a>B. Control Flow</h4><h5 id="1-condition"><a href="#1-condition" class="headerlink" title="1. condition"></a>1. condition</h5><ul>
+<li>if..else</li>
+<li>switch…case<ul>
+<li>reducer<h5 id="2-loop"><a href="#2-loop" class="headerlink" title="2. loop"></a>2. loop</h5></li>
+</ul>
+</li>
+<li>For</li>
+<li>ForEach<br>only for <strong>Arrays</strong>, <strong>Maps</strong> and <strong>Sets</strong></li>
+<li>for…in<br>loops over enumberable property names of an object</li>
+<li>for…of<br>use an object-specific iterator and loops over the values generated by that<h5 id="3-break-continue"><a href="#3-break-continue" class="headerlink" title="3. break, continue"></a>3. break, continue</h5></li>
+</ul>
+<hr>
+<h4 id="C-Types"><a href="#C-Types" class="headerlink" title="C. Types"></a>C. Types</h4><ul>
+<li><strong>primitives(value) types</strong><br>number, string, boolean, symbol, null, undefined<ul>
+<li>copied by their values</li>
+</ul>
+</li>
+<li><strong>reference/complex types</strong><br>Object, Function, Array<ul>
+<li>copied by their reference: the reference or address is copied, point to the same memory</li>
+<li>Use <code>const</code>(block-scoped) for all of the references</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="D-Strings"><a href="#D-Strings" class="headerlink" title="D. Strings"></a>D. Strings</h4><h5 id="1-Rules"><a href="#1-Rules" class="headerlink" title="1. Rules"></a>1. Rules</h5><ul>
+<li>Use single quotes <code>&#39; &#39;</code> for strings</li>
+<li><p>When programmatically building up strings, use template strings instead of concatenation</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sayHi</span>(<span class="params">name</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="string">`How are you, <span class="subst">$&#123;name&#125;</span>`</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>no <code>eval()</code> on a string</p>
+<h5 id="2-Methods"><a href="#2-Methods" class="headerlink" title="2. Methods"></a>2. Methods</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> s = <span class="string">'Hello World'</span>;</div><div class="line"><span class="comment">// the length of string</span></div><div class="line">s.length;</div><div class="line"><span class="comment">// string is immutable</span></div><div class="line">s[<span class="number">0</span>];</div><div class="line"></div><div class="line">s.toUpperCase();</div><div class="line">s.toLowerCase();</div><div class="line"></div><div class="line">s.indexOf(<span class="string">'world'</span>);</div><div class="line">s.substring(<span class="number">0</span>, <span class="number">5</span>);</div><div class="line"></div><div class="line"><span class="comment">// split the string into array</span></div><div class="line">s.split(<span class="string">''</span>);</div><div class="line"></div><div class="line"><span class="comment">// replace all space</span></div><div class="line">s.replace(<span class="regexp">/ /g</span>, <span class="string">'%20'</span>);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h4 id="E-Arrays"><a href="#E-Arrays" class="headerlink" title="E. Arrays"></a>E. Arrays</h4><h5 id="Rules"><a href="#Rules" class="headerlink" title="Rules"></a>Rules</h5><ul>
+<li>Use array spreads <code>...</code> to copy arrays</li>
+<li><p>Use array destructuring</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> arr = [<span class="number">1</span>, <span class="number">2.</span> <span class="number">3</span>, <span class="number">4</span>];</div><div class="line"></div><div class="line"><span class="keyword">const</span> [first, second] = arr;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Use <code>Array.from</code> for converting an array-like object to an array.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> arrLike = &#123;<span class="number">0</span>: <span class="string">'foo'</span>, <span class="number">1</span>: <span class="string">'bar'</span>&#125;;</div><div class="line"></div><div class="line"><span class="keyword">const</span> arr = <span class="built_in">Array</span>.from(arrLike);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="methods"><a href="#methods" class="headerlink" title="methods"></a>methods</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// </span></div><div class="line"><span class="comment">// or we can use spread operator</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> list = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</div><div class="line"></div><div class="line">list.length;</div><div class="line"></div><div class="line"><span class="comment">// add/delete elements(beginning, middle, end)</span></div><div class="line">list.unshift(<span class="number">0</span>);</div><div class="line">list.shift();</div><div class="line">list.push(<span class="number">4</span>);</div><div class="line">list.pop();</div><div class="line">list.splice(<span class="number">2</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">5</span>)</div><div class="line"></div><div class="line"><span class="comment">// find</span></div><div class="line"><span class="comment">// indexOf</span></div><div class="line">list.indexOf(<span class="number">0</span>, <span class="number">2</span>); <span class="comment">// -1</span></div><div class="line"><span class="comment">// lastIndexOf</span></div><div class="line">list.lastIndexOf(<span class="number">0</span>);</div><div class="line"><span class="comment">//includes</span></div><div class="line">list.includes(<span class="number">0</span>); <span class="comment">//true</span></div><div class="line"><span class="comment">// return the value of the first element in the array that satisfies the provided testing function. otherwise undefined is returned</span></div><div class="line"><span class="keyword">let</span> found = list.find(<span class="function"><span class="params">elem</span> =&gt;</span> elem &gt;<span class="number">2</span>); <span class="comment">// 3</span></div><div class="line"><span class="comment">// findIndex: return index</span></div><div class="line"><span class="keyword">let</span> foundIndex = list.findIndex(<span class="function"><span class="params">elem</span> =&gt;</span> elem&gt;<span class="number">2</span>); <span class="comment">// 2</span></div><div class="line"></div><div class="line"><span class="comment">// combine and slice</span></div><div class="line">list.concat([<span class="string">'A'</span>, <span class="string">'B'</span>])</div><div class="line"></div><div class="line"><span class="comment">// sort</span></div><div class="line">list.reverse().join(<span class="string">''</span>)</div><div class="line">list.sort()</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> list = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</div><div class="line"></div><div class="line"><span class="comment">// map</span></div><div class="line"><span class="comment">// in React, to iterate an array</span></div><div class="line">list.map(<span class="function"><span class="params">item</span> =&gt;</span> item+<span class="number">1</span>)</div><div class="line"><span class="comment">// filter</span></div><div class="line"><span class="comment">// reduce</span></div></pre></td></tr></table></figure>
+<hr>
+<h4 id="F-Object"><a href="#F-Object" class="headerlink" title="F. Object"></a>F. Object</h4><h5 id="1-create-Object"><a href="#1-create-Object" class="headerlink" title="1. create Object"></a>1. create Object</h5><ul>
+<li>object literal</li>
+<li>facroty functions</li>
+<li>constructor functions<h5 id="2-methods"><a href="#2-methods" class="headerlink" title="2. methods"></a>2. methods</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//  To avoid logging inherited properties</span></div><div class="line"></div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> key <span class="keyword">in</span> yourobject) &#123;</div><div class="line">   <span class="keyword">if</span> (yourobject.hasOwnProperty(key)) &#123;</div><div class="line">      <span class="built_in">console</span>.log(key, yourobject[key]);</div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="3-special-objects"><a href="#3-special-objects" class="headerlink" title="3. special objects"></a>3. special objects</h5><ul>
+<li>Math</li>
+<li>String</li>
+<li>Date</li>
+</ul>
+<h5 id="Rules-1"><a href="#Rules-1" class="headerlink" title="Rules"></a>Rules</h5><ul>
+<li>Use the literal syntax for object creation, no new object</li>
+<li><p>Use object method shorthand and property value shorthand</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> atom = &#123;</div><div class="line">    <span class="comment">// shorter to write and descriptive</span></div><div class="line">    value,</div><div class="line">    </div><div class="line">    addValue(value) &#123;</div><div class="line">        <span class="keyword">return</span> atom.value + value;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Group the shorthand properties at the beginning of the object</p>
+</li>
+<li>Only quote properties that are invalid identifiers</li>
+<li><p>Do not call <code>Object.prototype</code> methods drectly, such as <code>object.hasOwnProperty(key)</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> has = <span class="built_in">Object</span>.prototype.hasOwnProperty;</div><div class="line"><span class="comment">// or</span></div><div class="line"><span class="keyword">import</span> has <span class="keyword">from</span> <span class="string">'has'</span>; <span class="comment">// https://www.npmjs.com/package/has</span></div><div class="line"><span class="built_in">console</span>.log(has.call(object, key));</div></pre></td></tr></table></figure>
+</li>
+<li><p>Prefer the object spread operator over <code>Object.assign</code> to shallow-copy objects. Use the object rest operator to get a new object with certain properties omitted.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> original = &#123;<span class="attr">a</span>: <span class="number">1</span>, <span class="attr">b</span>: <span class="number">2</span>&#125;;</div><div class="line"><span class="keyword">const</span> copy = &#123;...original, <span class="attr">c</span>: <span class="number">3</span>&#125;;</div><div class="line"></div><div class="line"><span class="keyword">const</span> &#123;a, ...noA&#125; = copy; <span class="comment">//noA =&gt; &#123;b: 2, c: 3&#125;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="methods-1"><a href="#methods-1" class="headerlink" title="methods"></a>methods</h5><hr>
+<h4 id="G-Function"><a href="#G-Function" class="headerlink" title="G. Function"></a>G. Function</h4><h5 id="Basic"><a href="#Basic" class="headerlink" title="Basic"></a>Basic</h5><ul>
+<li>function expression and function declarations<ul>
+<li>function declarations: hoisting</li>
+</ul>
+</li>
+<li><p><strong>Arguments</strong></p>
+<ul>
+<li>Additional arguments or less arguments<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">let</span> total = <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> value <span class="keyword">of</span> <span class="built_in">arguments</span>)</div><div class="line">        total += value;</div><div class="line">    <span class="keyword">return</span> total;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><strong>the rest operator</strong></p>
+<ul>
+<li>real array</li>
+<li>rest parameter mush be last formal parameter<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">discount, ...prices</span>) </span>&#123;</div><div class="line">    <span class="keyword">const</span> total prices.reduce(<span class="function">(<span class="params">a, b</span>) =&gt;</span> a*b);</div><div class="line">    <span class="keyword">return</span> total * (<span class="number">1</span> - discount);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>Default Parameters</p>
+<ul>
+<li>Logical ||</li>
+<li>for function parameters</li>
+</ul>
+</li>
+<li>Getters and Setters<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> person = &#123;</div><div class="line">    firstName: <span class="string">'Lei'</span>,</div><div class="line">    lastName: <span class="string">'Zhang'</span>,</div><div class="line">    </div><div class="line">    get fullName()&#123;</div><div class="line">        <span class="keyword">return</span> <span class="string">`<span class="subst">$&#123;person.firstName&#125;</span> <span class="subst">$&#123;person.lastName&#125;</span>`</span>;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    set fullName() &#123;</div><div class="line">        <span class="keyword">const</span> parts = value.split(<span class="string">' '</span>);</div><div class="line">        <span class="keyword">this</span>.firstName = parts[<span class="number">0</span>];</div><div class="line">        <span class="keyword">this</span>.lastName = parts[<span class="number">1</span>];</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="Rules-2"><a href="#Rules-2" class="headerlink" title="Rules"></a>Rules</h5><ul>
+<li><strong>destructuring</strong><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getFullName</span>(<span class="params">&#123;firstName, lastName&#125;</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="string">`<span class="subst">$&#123;firstName&#125;</span> <span class="subst">$&#123;lastName&#125;</span>`</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// for multiple return values</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">processInput</span>(<span class="params">input</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> &#123; left, right, top, bottom &#125;;</div><div class="line">&#125;</div><div class="line"><span class="keyword">const</span> &#123; left, top &#125; = precessInput(input);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h4 id="H-Map-and-Set-new-Object"><a href="#H-Map-and-Set-new-Object" class="headerlink" title="H. Map and Set (new Object)"></a>H. Map and Set (new Object)</h4><h5 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> m = <span class="keyword">new</span> <span class="built_in">Map</span>();</div><div class="line">m.set(<span class="string">'Adam'</span>, <span class="number">67</span>);</div><div class="line">m.has(<span class="string">'Adam'</span>);</div><div class="line">m.get(<span class="string">'Adam'</span>);</div><div class="line">m.delete(<span class="string">'Adam'</span>);</div><div class="line"></div><div class="line"><span class="comment">// for...of...</span></div></pre></td></tr></table></figure>
+<h5 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Set</span></div><div class="line"><span class="comment">// only have key, doesn't have value</span></div><div class="line"><span class="comment">// array as input</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> s1 = <span class="keyword">new</span> <span class="built_in">Set</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]);</div><div class="line">s1.add(<span class="number">4</span>);</div><div class="line">s1.delete(<span class="number">1</span>);</div><div class="line"></div><div class="line"><span class="comment">// set -&gt; array</span></div><div class="line"><span class="keyword">let</span> arr1 = [...s1];</div></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/12/02/react-summary/" rel="next" title="React.js Summary">
+                <i class="fa fa-chevron-left"></i> React.js Summary
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/01/14/deploy-full-stack-project-into-cloud/" rel="prev" title="deploy full stack project into cloud">
+                deploy full stack project into cloud <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/setting/avatar.jpg"
+                alt="leiger" />
+            
+              <p class="site-author-name" itemprop="name">leiger</p>
+              <p class="site-description motion-element" itemprop="description">Nowhere to Place Youth</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">23</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">19</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/leiger" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:leiger2017@outlook.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://instagram.com/leiger_" target="_blank" title="Instagram"><i class="fa fa-fw fa-instagram"></i>Instagram</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#A-Global-Object"><span class="nav-text">A. Global Object</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#B-Control-Flow"><span class="nav-text">B. Control Flow</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-condition"><span class="nav-text">1. condition</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-loop"><span class="nav-text">2. loop</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-break-continue"><span class="nav-text">3. break, continue</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C-Types"><span class="nav-text">C. Types</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#D-Strings"><span class="nav-text">D. Strings</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-Rules"><span class="nav-text">1. Rules</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-Methods"><span class="nav-text">2. Methods</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#E-Arrays"><span class="nav-text">E. Arrays</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Rules"><span class="nav-text">Rules</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#methods"><span class="nav-text">methods</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#F-Object"><span class="nav-text">F. Object</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-create-Object"><span class="nav-text">1. create Object</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-methods"><span class="nav-text">2. methods</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-special-objects"><span class="nav-text">3. special objects</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Rules-1"><span class="nav-text">Rules</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#methods-1"><span class="nav-text">methods</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#G-Function"><span class="nav-text">G. Function</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Basic"><span class="nav-text">Basic</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Rules-2"><span class="nav-text">Rules</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#H-Map-and-Set-new-Object"><span class="nav-text">H. Map and Set (new Object)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Map"><span class="nav-text">Map</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Set"><span class="nav-text">Set</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-space-shuttle"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">leiger</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.4.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.4.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.4.1" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/setting/favicon/thunderbolt_medium.png?v=6.4.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/setting/favicon/thunderbolt_medium.png?v=6.4.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/setting/favicon/thunderbolt_small.png?v=6.4.1">
+
+
+  <link rel="mask-icon" href="/images/setting/favicon/thunderbolt_medium.png?v=6.4.1" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.4.1',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="Excellent library for building SPA!">
+<meta name="keywords" content="react, redux, fetch">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React.js Summary">
+<meta property="og:url" content="http://leiger.me/2018/12/02/react-summary/index.html">
+<meta property="og:site_name" content="LEIGER">
+<meta property="og:description" content="Excellent library for building SPA!">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="en-resource://database/465:1">
+<meta property="og:image" content="en-resource://database/479:1">
+<meta property="og:image" content="en-resource://database/477:1">
+<meta property="og:updated_time" content="2019-01-16T23:27:33.964Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="React.js Summary">
+<meta name="twitter:description" content="Excellent library for building SPA!">
+<meta name="twitter:image" content="en-resource://database/465:1">
+
+
+
+
+
+
+  <link rel="canonical" href="http://leiger.me/2018/12/02/react-summary/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>React.js Summary | LEIGER</title>
+  
+
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?4208e2967dbc50e800d61d4b88bc1a21";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">LEIGER</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">BE WITH YOU</p>
+      
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archives<span class="badge">23</span></a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />Categories<span class="badge">8</span></a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />Tags<span class="badge">20</span></a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />About</a>
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://leiger.me/2018/12/02/react-summary/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="leiger">
+      <meta itemprop="description" content="Nowhere to Place Youth">
+      <meta itemprop="image" content="/images/setting/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LEIGER">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">React.js Summary
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-12-02 20:26:56" itemprop="dateCreated datePublished" datetime="2018-12-02T20:26:56-05:00">2018-12-02</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/web/" itemprop="url" rel="index"><span itemprop="name">web</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote class="blockquote-center"><p>Excellent library for building SPA!</p>
+</blockquote>
+<a id="more"></a>
+<h4 id="A-Getting-Started"><a href="#A-Getting-Started" class="headerlink" title="A. Getting Started"></a>A. Getting Started</h4><h5 id="1-What’s-react"><a href="#1-What’s-react" class="headerlink" title="1. What’s react"></a>1. What’s react</h5><ul>
+<li>react is a view library</li>
+<li>the heart of the react is Components</li>
+<li>virtual DOM<h5 id="2-Comparing-with-other-frameworks"><a href="#2-Comparing-with-other-frameworks" class="headerlink" title="2. Comparing with other frameworks"></a>2. Comparing with other frameworks</h5></li>
+<li><strong>Angular</strong> is a framework or a complete solution, while react is a library<h5 id="3-Create-a-react-app"><a href="#3-Create-a-react-app" class="headerlink" title="3. Create a react app"></a>3. Create a react app</h5></li>
+<li>create-react-app package<ul>
+<li>hot module reloading</li>
+</ul>
+</li>
+<li>some other useful libraries<ul>
+<li>bootstrap</li>
+<li>font-awesome</li>
+</ul>
+</li>
+<li>snippet in webstorm<ul>
+<li><code>rccp</code> create skeleton</li>
+<li><code>rsc</code> create stateless function<h5 id="4-JSX"><a href="#4-JSX" class="headerlink" title="4. JSX"></a>4. JSX</h5></li>
+</ul>
+</li>
+<li>JavaScript XML, just a notation</li>
+<li>JSX expressions are just like normal JavaScript object. We can return them from a function or pass them to a function</li>
+<li><strong>Babel</strong> is a modern JavaScript compiler, convert JSX syntax to plain JavaScript code that the broswer can understand</li>
+<li>JSX expressions must have one parent element<ul>
+<li><code>&lt;div&gt;&lt;/div&gt;</code></li>
+<li><code>&lt;React.Fragment&gt;&lt;/React.Fragment&gt;</code><figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// the first argument to this method is the type of the element we wanna to create</span></div><div class="line"><span class="comment">// that's the reason why JSX expressions must have one parent element</span></div><div class="line"><span class="keyword">import</span> React, &#123;Component&#125; <span class="keyword">from</span> <span class="string">'react'</span>;</div><div class="line"></div><div class="line">React.createElement(<span class="string">'h1'</span>, xxx)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="5-Name-rules"><a href="#5-Name-rules" class="headerlink" title="5. Name rules"></a>5. Name rules</h5><ul>
+<li>the name of the file: <strong>camel notation</strong></li>
+<li>the name of the Component: <strong>pascal notation</strong><ul>
+<li>this is how React knows to render a Component</li>
+</ul>
+</li>
+<li>the name of the event handler: <strong>camel notation</strong><br>keep the word from actual action<ul>
+<li>For props: prefix with <code>on*</code>, as in <code>onClick</code></li>
+<li>For function names: prefix with <code>handle*</code> as in<code>handleClick</code></li>
+<li>For complicated naming: put the noun first, then the verb, as in <code>onAlertClick={handleAlertClick} onFormSubmit={handleFormSubmit} onRegistrationSubmit onLoginSubmit</code> </li>
+</ul>
+</li>
+</ul>
+<h5 id="6-Debugging-React-App"><a href="#6-Debugging-React-App" class="headerlink" title="6. Debugging React App"></a>6. Debugging React App</h5><ul>
+<li>a linter(eslint, jslint)</li>
+<li>debuggers(React Developer Tools)<ul>
+<li>Search bar</li>
+<li>$r</li>
+</ul>
+</li>
+</ul>
+<h5 id="7-others"><a href="#7-others" class="headerlink" title="7. others"></a>7. others</h5><ul>
+<li>if there is nothing between the opening and closing tag, we should use <strong>self closing syntax</strong></li>
+<li>Useful sources<ul>
+<li><a href="https://github.com/sudheerj/reactjs-interview-questions" target="_blank" rel="noopener">Reactjs-interview-questions</a></li>
+<li><a href="https://medium.com/@baphemot/a-react-job-interview-recruiter-perspective-f1096f54dd16" target="_blank" rel="noopener">A React job interview -recruiter perspective</a></li>
+<li><a href="https://codewithmosh.com/courses/enrolled/357787" target="_blank" rel="noopener">codewithmosh-Reactjs</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="B-React-JSX-Style-Guide"><a href="#B-React-JSX-Style-Guide" class="headerlink" title="B. React/JSX Style Guide"></a>B. React/JSX Style Guide</h4><p><a href="https://github.com/airbnb/javascript/tree/master/react" target="_blank" rel="noopener">Airbnb React/JSX Style Guide</a></p>
+<ul>
+<li>if you have internal state and/or refs, <code>class extends React.Component</code> is better. Otherwise, normal functions(not arrow functions)</li>
+<li>No mixins</li>
+<li><p>Naming</p>
+<ul>
+<li><strong>Extensions:</strong> Use .jsx extension for React components</li>
+<li><strong>Filename:</strong> Use PascalCase for filename. E.g., <code>ReservationCard.jsx</code></li>
+<li><strong>Reference Naming:</strong> Use PascalCase for React components and camelCase for their instances</li>
+<li><strong>Component Naming:</strong> Use the filename as the component name</li>
+<li><strong>Higher-order Component Naming:</strong><figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> ReservationCard <span class="keyword">from</span> <span class="string">'./ReservationCard'</span>;</div><div class="line"><span class="keyword">const</span> reservationCard = &lt;ReservationCard /&gt;;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>Alignment</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;Foo</div><div class="line">    superLongParam=<span class="string">"bar"</span></div><div class="line">    anotherSuperLongParam=<span class="string">"baz"</span></div><div class="line">/&gt;</div><div class="line"></div><div class="line"><span class="comment">// if props fit in one line then keep it on the same line</span></div><div class="line">&lt;Foo bar=<span class="string">"bar"</span> /&gt;</div><div class="line"></div><div class="line">&#123;showButton &amp;&amp; (</div><div class="line">    &lt;Button /&gt;</div><div class="line">)&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Quotes</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Always use double quotes for JSX attributes, but single quotes for all other JS</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h4 id="C-Components"><a href="#C-Components" class="headerlink" title="C. Components"></a>C. Components</h4><h5 id="1-State"><a href="#1-State" class="headerlink" title="1. State"></a>1. State</h5><ul>
+<li>Basically the state is an object that includes any data that this component needs</li>
+<li>this.setState<ul>
+<li>the value of the count property is being implemented, but the react is not aware of that</li>
+<li>asynchronous<ul>
+<li>comparing new virtual dom and old virtual dom<h5 id="2-Embedding-expressions"><a href="#2-Embedding-expressions" class="headerlink" title="2. Embedding expressions"></a>2. Embedding expressions</h5></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>between the curely braces, we can add any valid JavaScript expressions<h5 id="3-handling-events"><a href="#3-handling-events" class="headerlink" title="3. handling events"></a>3. handling events</h5></li>
+<li>we are not calling this method, we’re simple passing a <strong>reference</strong> to it. This is different from handling events in vanilla JavaScript</li>
+<li>bind event handler<ul>
+<li>we don’t have access to this, depending on how a function is called, this can reference different object</li>
+<li>if a function is called of a method in an object, this will reference with that object if that function is called as a stand alone function, in that case, strict mode -&gt; undefined</li>
+<li>base constructor<ul>
+<li>passing event arguments -&gt; reference function -&gt; arrow function<figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">handleIncrement = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">    <span class="keyword">this</span>.setState(&#123;</div><div class="line">        value: <span class="keyword">this</span>.state.value+<span class="number">1</span></div><div class="line">    &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="4-Conditional-and-Iterate"><a href="#4-Conditional-and-Iterate" class="headerlink" title="4. Conditional and Iterate"></a>4. Conditional and Iterate</h5><ul>
+<li>conditional rendering<ul>
+<li>in a seperate method, using <code>if... else...</code></li>
+<li>only if, using <code>&amp;&amp;</code> (logical and)</li>
+</ul>
+</li>
+<li>interate<ul>
+<li>map method</li>
+<li>unique key<figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">render() &#123;</div><div class="line">    <span class="keyword">return</span> (</div><div class="line">        &lt;div&gt;</div><div class="line">            &#123;<span class="keyword">this</span>.state.counters.map(<span class="function"><span class="params">counter</span> =&gt;</span> &lt;Counter key=<span class="string">"counter.id"</span> value=<span class="string">"counter.value"</span> /&gt;)&#125;</div><div class="line">        &lt;<span class="regexp">/div&gt;</span></div><div class="line"><span class="regexp">    )</span></div><div class="line"><span class="regexp">&#125;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="5-Class-and-Style"><a href="#5-Class-and-Style" class="headerlink" title="5. Class and Style"></a>5. Class and Style</h5><ul>
+<li>we can not use class -&gt; reserve keyword in JavaScript, the name of the class is <code>className</code></li>
+<li>for dynamic class we should set it in a depend method<figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">getBadgeClasses() &#123;</div><div class="line">    <span class="keyword">let</span> classes = <span class="string">"badge m-2 badge-"</span>;</div><div class="line">    classes += <span class="keyword">this</span>.state.count === <span class="number">0</span> ? <span class="string">"warning"</span> : <span class="string">"primary"</span>;</div><div class="line">    <span class="keyword">return</span> classes</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h4 id="D-Composing-Components"><a href="#D-Composing-Components" class="headerlink" title="D. Composing Components"></a>D. Composing Components</h4><h5 id="1-Passing-data-to-Component"><a href="#1-Passing-data-to-Component" class="headerlink" title="1. Passing data to Component"></a>1. Passing data to Component</h5><ul>
+<li>we need to use <strong>props</strong> to pass the data</li>
+<li>passing children: if we wanna to pass a complex elements to a child component, we use the <strong>children prop</strong><h5 id="2-Props-vs-State"><a href="#2-Props-vs-State" class="headerlink" title="2. Props vs State"></a>2. Props vs State</h5></li>
+<li>props contains the data we give to a component, whereas state includes data that is local or private to that component</li>
+<li>the state is local and internal to that component and invisible to other components</li>
+<li>props is read only<figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// parent component</span></div><div class="line">handleDelete = <span class="function"><span class="params">counterId</span> =&gt;</span> &#123;</div><div class="line">    <span class="keyword">const</span> counters = <span class="keyword">this</span>.state.counters.filter(<span class="function"><span class="params">c</span> =&gt;</span> c.id !== counterId);</div><div class="line">    <span class="keyword">this</span>.setState(&#123; counters &#125;);</div><div class="line">&#125;</div><div class="line"></div><div class="line">&lt;Counter onDelete=&#123;<span class="keyword">this</span>.handleDelete&#125; /&gt;</div><div class="line"></div><div class="line"><span class="comment">// child component</span></div><div class="line"><span class="comment">// &lt;button onClick=&#123;()=&gt;this.props.onDelete(this.state.id)&#125;"&gt;Delete&lt;/button&gt;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="3-Single-source-of-truth"><a href="#3-Single-source-of-truth" class="headerlink" title="3. Single source of truth"></a>3. Single source of truth</h5><ul>
+<li><strong>controlled component</strong> doesn’t have its own state. It receives data from props and whenever data needs to be changed, this component will raise an event </li>
+<li><strong>lift the state up:</strong> bubbling it up to the parent of this component<ul>
+<li>it allows to pass data between siblings</li>
+<li>make re-usability easier</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">state = &#123;</div><div class="line">    counters: [</div><div class="line">    &#123;<span class="attr">id</span>: <span class="number">0</span>, <span class="attr">value</span>: <span class="number">0</span>&#125;,</div><div class="line">    &#123;<span class="attr">id</span>: <span class="number">1</span>, <span class="attr">value</span>: <span class="number">1</span>&#125;&#125;</div><div class="line">    ]</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// increment 1 value</span></div><div class="line">handleIncrement = <span class="function"><span class="params">counter</span> =&gt;</span> &#123;</div><div class="line">    <span class="keyword">const</span> counters = [...this.state.counters];</div><div class="line">    <span class="keyword">const</span> index = counter.indexOf(counter);</div><div class="line">    </div><div class="line">    <span class="comment">// counters[index] = &#123;...counter&#125;;</span></div><div class="line">    counters[index].value++;</div><div class="line">    <span class="keyword">this</span>.setState(&#123; counters &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h5 id="4-Stateless-Functional-Components"><a href="#4-Stateless-Functional-Components" class="headerlink" title="4. Stateless Functional Components"></a>4. Stateless Functional Components</h5><ul>
+<li>cannot use lifecycle hooks<figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Object destructuring for props</span></div><div class="line"><span class="keyword">const</span> Navbar = <span class="function">(<span class="params">&#123;totalCounters&#125;</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">return</span> (</div><div class="line">        &lt;nav className=<span class="string">"navbar navbar-light bg-light"</span>&gt;</div><div class="line">            &lt;a className=<span class="string">"navbar-brand"</span> href=<span class="string">"#"</span>&gt;&#123;totalCounters&#125;&lt;<span class="regexp">/a&gt;</span></div><div class="line"><span class="regexp">        &lt;/</span>nav&gt;</div><div class="line">    )</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="5-Lifecycle-Hooks"><a href="#5-Lifecycle-Hooks" class="headerlink" title="5. Lifecycle Hooks"></a>5. Lifecycle Hooks</h5><p><img src="en-resource://database/465:1" alt="22ffcd2adaf58e0355d8bbffe147f047.png"><br>3 phases</p>
+<ul>
+<li><p><strong>Mount</strong></p>
+<ul>
+<li><p><strong>constructor</strong>: </p>
+<ul>
+<li>is called only once, when the instance of the class is created</li>
+<li>a good place to set the state from the props from the outside, don’t forget the <code>super(props)</code> in this case</li>
+<li>cannot call setState, only can be called when the component is rendered and place in the DOM<figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">constructor</span>(props) &#123;</div><div class="line">    <span class="keyword">super</span>(props);</div><div class="line">    <span class="keyword">this</span>.state = <span class="keyword">this</span>.props.something;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><strong>static getDerivedStateFromProps()</strong></p>
+</li>
+<li><p><strong>render</strong></p>
+<ul>
+<li>when one component is rendered, all of it’s children are also rendered recursively</li>
+</ul>
+</li>
+<li><strong>componentDidMount</strong><ul>
+<li>is called after the component is rendered into the DOM</li>
+<li>perfect place to get AJAX data from the server<ul>
+<li>the data will not be there before render happens</li>
+<li>with the new asynchronous rendering in React Fiber<figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">componentDidMount() &#123;</div><div class="line">    <span class="comment">// ajax call</span></div><div class="line">    <span class="keyword">this</span>.setState(&#123; movies &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>UPDATE</strong><br>happened when the state or the props of the component changes<br>entire componet tree is rendered, updating the virtual DOM</p>
+<ul>
+<li><strong>componentDidUpdate</strong><figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">componentDidUpdate(prevProps, prevState) &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"prevProps"</span>, prevProps);</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"prevState"</span>, prevState);</div><div class="line">    <span class="keyword">if</span>(prevProps.counter.value !== <span class="keyword">this</span>.props.counter.value) &#123;</div><div class="line">        <span class="comment">// Ajax call and get new data from the server</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><strong>UNMOUNT</strong></p>
+<ul>
+<li><strong>componentWillUnmount</strong><ul>
+<li>before unmount we can remove the setTimeout or some listenings</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="E-Pagination-Filtering-and-Sorting"><a href="#E-Pagination-Filtering-and-Sorting" class="headerlink" title="E. Pagination, Filtering and Sorting"></a>E. Pagination, Filtering and Sorting</h4><h5 id="Pagination"><a href="#Pagination" class="headerlink" title="Pagination"></a>Pagination</h5><ul>
+<li>Before creating a component, think about its interface<br>Use it, before complementing it<figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// create an array from 1 to a number</span></div><div class="line"><span class="keyword">import</span> _ <span class="keyword">from</span> <span class="string">'lodash'</span>;</div><div class="line"><span class="keyword">let</span> pageNum = _.range(<span class="number">1</span>, num);</div><div class="line"></div><div class="line"><span class="comment">// page total numbers</span></div><div class="line"><span class="keyword">const</span> pagesCount = <span class="built_in">Math</span>.ceil(totalLength / pageSize);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="Filtering"><a href="#Filtering" class="headerlink" title="Filtering"></a>Filtering</h5><ul>
+<li>filter data, then get currentPage data</li>
+<li><strong>defaultProps</strong></li>
+<li>after click filter button, need to set current page to the first page<h5 id="Sort"><a href="#Sort" class="headerlink" title="Sort"></a>Sort</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">_.orderBy(movies, [sort.type], [sort.order]);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h4 id="F-Routing"><a href="#F-Routing" class="headerlink" title="F. Routing"></a>F. Routing</h4><ul>
+<li><code>npm install react-router-dom</code></li>
+<li>BrowserRouter</li>
+<li>Route<ul>
+<li>history</li>
+<li>location</li>
+<li>match</li>
+</ul>
+</li>
+<li>exact</li>
+<li><p>Switch</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">Switch</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">'/products'</span> <span class="attr">component</span>=<span class="string">&#123;Products&#125;/</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">Switch</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>Link</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">Link</span> <span class="attr">to</span>=<span class="string">'/products'</span> /&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>Passing props</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">'/products'</span> <span class="attr">render</span>=<span class="string">&#123;(props)</span> =&gt;</span> <span class="tag">&lt;<span class="name">Products</span>  <span class="attr">sortBy</span>=<span class="string">"newest"</span> &#123;<span class="attr">...props</span>&#125; /&gt;</span>&#125; /&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Route parameters</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">'/products/:id'</span> <span class="attr">component</span>=<span class="string">&#123;productdetails&#125;</span> /&gt;</span></div><div class="line">// get the id</div><div class="line">&#123;this.props.match.params.id&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Optional Parameters</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// regular expression ?</span></div><div class="line">&lt;Route path=<span class="string">'/posts/:year?/:month?'</span> /&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Query string parameters</p>
+<ul>
+<li><code>npm i query-string</code><figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> queryString <span class="keyword">from</span> <span class="string">'query-string'</span>;</div><div class="line"><span class="keyword">const</span> &#123; sortBy &#125; = queryStirng.parse(location.search)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>Redirect</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;Route path=<span class="string">'not-found'</span> component=&#123;NotFound&#125; /&gt;</div><div class="line">&lt;Redirect to=<span class="string">'not-found'</span> /&gt;</div><div class="line"></div><div class="line">&lt;Redirect <span class="keyword">from</span>=<span class="string">'/messages'</span> to=<span class="string">'/posts'</span> /&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Programmatic Navigation</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">handleSave = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">    <span class="keyword">this</span>.props.history.push(<span class="string">'/products'</span>);</div><div class="line">    <span class="comment">// login, not go back</span></div><div class="line">    <span class="keyword">this</span>.props.history.replace(<span class="string">'/products'</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Nested Routing</p>
+</li>
+</ul>
+<hr>
+<h4 id="G-Forms"><a href="#G-Forms" class="headerlink" title="G. Forms"></a>G. Forms</h4><figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// htmlFor -- label</span></div><div class="line">form&gt;(div.form-group&gt;label+input.form-control)*<span class="number">2</span></div></pre></td></tr></table></figure>
+<ul>
+<li>form -&gt; onSubmit</li>
+<li>e.preventDefault();<h5 id="Refs"><a href="#Refs" class="headerlink" title="Refs"></a>Refs</h5><figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">username = React.createRef();</div><div class="line"></div><div class="line">&lt;input ref=&#123;<span class="keyword">this</span>.username&#125; /&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="Two-way-binding"><a href="#Two-way-binding" class="headerlink" title="Two way binding"></a>Two way binding</h5><figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">state = &#123;</div><div class="line">    account: &#123;</div><div class="line">        username: <span class="string">''</span>,</div><div class="line">        password: <span class="string">''</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// e</span></div><div class="line">handleChange = <span class="function">(<span class="params">&#123;currentTarget: input&#125;</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">const</span> account = &#123;...this.state.account&#125;;</div><div class="line">    account[input.name] = input.value;</div><div class="line">    <span class="keyword">this</span>.setState(&#123;account&#125;);</div><div class="line">&#125;</div><div class="line"></div><div class="line">&lt;input value=&#123;<span class="keyword">this</span>.state.account.username&#125; onChange=&#123;<span class="keyword">this</span>.handleChange&#125; /&gt;</div><div class="line">&lt;input value=&#123;<span class="keyword">this</span>.state.account.password&#125; onChange=&#123;<span class="keyword">this</span>.handleChange&#125; /&gt;</div></pre></td></tr></table></figure>
+<h5 id="Validation"><a href="#Validation" class="headerlink" title="Validation"></a>Validation</h5><figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (<span class="keyword">this</span>.state.account.username.trim() === <span class="string">''</span>)</div><div class="line">    <span class="keyword">this</span>.state.errors.username = <span class="string">'Username is required'</span>;</div><div class="line"></div><div class="line"><span class="keyword">return</span> <span class="built_in">Object</span>.keys(errors).length === <span class="number">0</span> ? <span class="literal">null</span> : errors;</div></pre></td></tr></table></figure>
+<ul>
+<li>joi<br>computed property</li>
+</ul>
+<hr>
+<h4 id="H-Redux"><a href="#H-Redux" class="headerlink" title="H. Redux"></a>H. Redux</h4><h5 id="1-Actions"><a href="#1-Actions" class="headerlink" title="1. Actions"></a>1. Actions</h5><ul>
+<li>Actions are plain JavaScript Objects<ul>
+<li><strong>type:</strong></li>
+</ul>
+</li>
+<li>Actions are the only source of information for the store, send them to the store using <code>store.dispatch()</code></li>
+</ul>
+<hr>
+<h4 id="I-Fetch"><a href="#I-Fetch" class="headerlink" title="I. Fetch"></a>I. Fetch</h4><p><img src="en-resource://database/479:1" alt="96491172b3d1a1a5ef9342546ec919b6.png"></p>
+<p><img src="en-resource://database/477:1" alt="cc99691e96b3ab4c6d676c4680824c94.png"></p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/react-redux-fetch/" rel="tag"># react, redux, fetch</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/26/CSS-and-SASS-summary/" rel="next" title="CSS and SASS summary">
+                <i class="fa fa-chevron-left"></i> CSS and SASS summary
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/12/09/JavaScript-Summary/" rel="prev" title="JavaScript Summary">
+                JavaScript Summary <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/setting/avatar.jpg"
+                alt="leiger" />
+            
+              <p class="site-author-name" itemprop="name">leiger</p>
+              <p class="site-description motion-element" itemprop="description">Nowhere to Place Youth</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">23</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">19</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/leiger" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:leiger2017@outlook.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://instagram.com/leiger_" target="_blank" title="Instagram"><i class="fa fa-fw fa-instagram"></i>Instagram</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#A-Getting-Started"><span class="nav-text">A. Getting Started</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-What’s-react"><span class="nav-text">1. What’s react</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-Comparing-with-other-frameworks"><span class="nav-text">2. Comparing with other frameworks</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-Create-a-react-app"><span class="nav-text">3. Create a react app</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-JSX"><span class="nav-text">4. JSX</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-Name-rules"><span class="nav-text">5. Name rules</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#6-Debugging-React-App"><span class="nav-text">6. Debugging React App</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#7-others"><span class="nav-text">7. others</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#B-React-JSX-Style-Guide"><span class="nav-text">B. React/JSX Style Guide</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C-Components"><span class="nav-text">C. Components</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-State"><span class="nav-text">1. State</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-Embedding-expressions"><span class="nav-text">2. Embedding expressions</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-handling-events"><span class="nav-text">3. handling events</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-Conditional-and-Iterate"><span class="nav-text">4. Conditional and Iterate</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-Class-and-Style"><span class="nav-text">5. Class and Style</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#D-Composing-Components"><span class="nav-text">D. Composing Components</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-Passing-data-to-Component"><span class="nav-text">1. Passing data to Component</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-Props-vs-State"><span class="nav-text">2. Props vs State</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-Single-source-of-truth"><span class="nav-text">3. Single source of truth</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-Stateless-Functional-Components"><span class="nav-text">4. Stateless Functional Components</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-Lifecycle-Hooks"><span class="nav-text">5. Lifecycle Hooks</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#E-Pagination-Filtering-and-Sorting"><span class="nav-text">E. Pagination, Filtering and Sorting</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Pagination"><span class="nav-text">Pagination</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Filtering"><span class="nav-text">Filtering</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Sort"><span class="nav-text">Sort</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#F-Routing"><span class="nav-text">F. Routing</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#G-Forms"><span class="nav-text">G. Forms</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Refs"><span class="nav-text">Refs</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Two-way-binding"><span class="nav-text">Two way binding</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Validation"><span class="nav-text">Validation</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#H-Redux"><span class="nav-text">H. Redux</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-Actions"><span class="nav-text">1. Actions</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#I-Fetch"><span class="nav-text">I. Fetch</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-space-shuttle"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">leiger</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.4.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.4.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
