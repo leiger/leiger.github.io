@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[deploy full stack project into cloud]]></title>
+    <title><![CDATA[Deploy full stack project into cloud]]></title>
     <url>%2F2019%2F01%2F14%2Fdeploy-full-stack-project-into-cloud%2F</url>
     <content type="text"><![CDATA[Forget to renew… Have to deploy again… A. 管理控制台管理控制台：客户端xshell使用密钥或者账号密码进行连接，还是账号密码方便（得删除密钥才行！！） B. 下载Node.js和nginx, mongodb Node.js nginx所有的配置文件都在 /etc/nginx下，每个虚拟主机安排在/etc/niginx/sites-available下实际的web内容在目录/var/www/html下 MongoDBmongodbsudo service mongod startsudo service mongod restart默认mongodb地址/var/lib/mongodb C. 修改主机名修改linux主机名vim /etc/hostname还得修改vim /etc/host来避免 sudo: unable to resolve host leiger的问题解决方案 端口管理阿里云默认开启的端口不多，自己的node.js3000端口没打开，外网无法访问查看端口调用lsof -i:4000杀端口kill -9 (pid) ctrl+c: 端口被关闭ctrl+z: 后台会运行 pm2更好用npm install pm2 -gpm2 start xxpm2 stop xxpm2 start allpm2 stop allpm2 logpm2 listmv www demo-server 改名字 D. 二级域名部署阿里云服务器上得先添加域名规则先重启nginxnginx -s reload 在导入json文件到mongodb中时，总是出现错误:unreachable server不知道为啥试了各种方法都不行，重启下mongodb就好了…sudo service mongod restart还得注意下数据库名称，名称应该为vue_mall而不是vmall https的话阿里云之前申请过了，这次只要下载证书和密钥就可以了得在nginx上配置才行配置主要代码123456789101112131415server &#123; listen 443 ssl; server_name vmall.leiger.tech; ssl_vertificate /etc/nginx/conf.d/vmall/vmall.pem; ssl_certificate_key /etc/nginx/conf.d/vmall.key; ssl_protocols TLSv1 TLSv1.1 TLSv1.2; root /var/www/vmall; index index.html location /users/&#123; proxy_pass http://127.0.0.1:3000/users/; &#125;&#125; E. http转https还得http强制转https, http没备案会被墙…强制https访问最简单的方式就是将所有的http请求通过rewrite重定向到https即可]]></content>
       <categories>
         <category>web</category>
       </categories>
       <tags>
-        <tag>nginx, ubuntu</tag>
+        <tag>nginx</tag>
+        <tag>ubuntu</tag>
       </tags>
   </entry>
   <entry>
@@ -30,18 +31,53 @@
         <category>web</category>
       </categories>
       <tags>
-        <tag>react, redux, fetch</tag>
+        <tag>react</tag>
+        <tag>redux</tag>
+        <tag>fetch</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[let's go pikachu/eevee!]]></title>
+    <url>%2F2018%2F11%2F26%2Flet-s-go-pikachu-eevee%2F</url>
+    <content type="text"><![CDATA[太好玩了吧hahahaha A. 战斗攻略 会泰山压顶的卡比兽克变小吉利蛋 冰冻光速版本比较强 慢吞吞性格适合做输出 大字炎爆的超梦打魔法产物 超梦打暴鲤龙带十万伏特 T1: 臭臭泥, 宝石海星(速度115) 水伊布胆小大胆都行，肉啊 变小吉利蛋好用 伙伴伊布辅助 火爆猴，螺母打卡比兽（格斗克一般） 卡比去超梦洞抓 两只化石翼龙拼速度mega岩崩 B. 常用宝可梦带的技能 卡比兽睡觉 剧毒 欺诈 变小 超梦超能力 -&gt; 格斗/毒幽灵 -&gt; 幽灵/超能力格斗 -&gt; 一般/岩石/钢/冰/恶地面 -&gt; 毒/岩石/钢/火/电 暴鲤龙地面 电 恶 水 宝石海星水 冰 超能力 电 梦幻格斗 飞行 超能力 恶 三地鼠岩石 岩石 恶 地面 大针蜂毒 虫 地面 虫 C. 属性相克表 D. 常用锁性格的花花（速度为王！）胆小：粉和红爽朗：粉和蓝]]></content>
+      <categories>
+        <category>games</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[如何做好投资理财]]></title>
+    <url>%2F2018%2F11%2F14%2F%E5%A6%82%E4%BD%95%E5%81%9A%E5%A5%BD%E6%8A%95%E8%B5%84%E7%90%86%E8%B4%A2%2F</url>
+    <content type="text"><![CDATA[穷困潦倒…哭 A. 如何做好理财投资理财的目的 资产保值 主要目的，保持原有的购买力 和通货膨胀率，汇率赛跑 资产增值 投资理财的工作也是要适度收益类型 账面收益 实际收益 B. 理财心学认知力 积累财务、金融、经济和管理概念 实践，定期方式自己的行为后果 持续学习，不断拓展能力圈自控力 合理的目标股票，基金，定期存储，活期存储，保险 系统的计划 投入计划：金额和时间点 收益计划 退出计划：投入前制定好，注意手续费等退出成本 风险应对计划 噪音的隔绝 以客观事实为依据，冷静思考来采取行动 市场正确时，顺应大的趋势进行操作 市场错误时，不为片面的噪声误导，坚持大趋势 耐心，耐心，还是耐心 频繁交易的坏处 两种心理损失厌恶心理盈利锁定心理行动力 明确自己的能力圈，知可为知不可为 围绕自己能够真正了解的那些企业名字的周围，画一个圈，然后在衡量这些企业的价值高低、管理优劣、出现经营困难的风险大小，排除掉不合格的企业 找不到合适的降低自己的投资回报目标设定，将资产放在安全的保值投资领域里，然后耐心拓展自己的能力圈 C. 常见投资产品金融市场 货币市场 短期金融资产交易 国库券，商业票据，银行承兑汇票，可转让定期存单，回购协议 交易中介往往是商业银行和非银行金融机构 外汇市场 不同国家的货币 证券市场 股票 一级市场购买，初次发行时直接购买 二级市场购买，从持有股票的公司股东手上购买 债券投资的选择 银行储蓄 银行理财产品 债券股票 基金 风险投资基金 保险 黄金 房地产]]></content>
+      <categories>
+        <category>finance</category>
+      </categories>
+      <tags>
+        <tag>investment</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[CSS and SASS summary]]></title>
     <url>%2F2018%2F07%2F26%2FCSS-and-SASS-summary%2F</url>
-    <content type="text"><![CDATA[flex flex box ahahaha [TOC] A. Terminology Selectors Properties B. Formatting Prefer dashes over camelCasing in class names Do not use ID selectors 12345.one,.selector,.per-line &#123; // ...&#125; Use 0 instead of none to specify that a style has no border C. Layout1. CSS box modal display + float + position2. flexbox flexbox common layout flex-container flex-direction: row | row-reverse | column | column-reverse flex-wrap: nowrap | wrap | wrap-reverse flex-flow: || justify-content: flex-start | flex-end | center | space-between | space-around; align-items: flex-start | flex-end | center | baseline | stretch align-content123456.box &#123; display: flex;&#125;.box &#123; display: inline-flex;&#125; flex-item order: //default 0 flex-grow: //default 0 flex-shrink: //default 1 flex-basis flex: none | || //default 0 1 auto align-self: auto | flex-start | flex-end | center | baseline | stretch D. SASS Use .scss syntax, never the original .sass syntax Do not nest selectors more than three levels deep!12345678910.btn &#123; background: green; font-weight: bold; @include transition(background 0.5s ease); // nested selectors .icon &#123; margin-right: 10px; &#125;&#125; units of font sizerem values are relative to the root html element]]></content>
+    <content type="text"><![CDATA[flex flex box ahahaha A. Terminology Selectors Properties B. Formatting Prefer dashes over camelCasing in class names Do not use ID selectors 12345.one,.selector,.per-line &#123; // ...&#125; Use 0 instead of none to specify that a style has no border C. Layout1. CSS box modal display + float + position2. flexbox flexbox common layout flex-container flex-direction: row | row-reverse | column | column-reverse flex-wrap: nowrap | wrap | wrap-reverse flex-flow: || justify-content: flex-start | flex-end | center | space-between | space-around; align-items: flex-start | flex-end | center | baseline | stretch align-content123456.box &#123; display: flex;&#125;.box &#123; display: inline-flex;&#125; flex-item order: //default 0 flex-grow: //default 0 flex-shrink: //default 1 flex-basis flex: none | || //default 0 1 auto align-self: auto | flex-start | flex-end | center | baseline | stretch D. SASS Use .scss syntax, never the original .sass syntax Do not nest selectors more than three levels deep!12345678910.btn &#123; background: green; font-weight: bold; @include transition(background 0.5s ease); // nested selectors .icon &#123; margin-right: 10px; &#125;&#125; units of font sizerem values are relative to the root html element]]></content>
       <categories>
         <category>web</category>
       </categories>
       <tags>
-        <tag>css, sass, flex</tag>
+        <tag>css</tag>
+        <tag>sass</tag>
+        <tag>flex</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Common Front-end security problem]]></title>
+    <url>%2F2018%2F04%2F03%2FCommon-Front-end-security-problem%2F</url>
+    <content type="text"><![CDATA[In danger!!!! A. xss cross-site scripting enable attackers to inject scripts into web pages B. csrf cross-site request forgery happens in authenticated sessions, and force an end user to execute unwanted actions on a web application]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>xss</tag>
+        <tag>csrf</tag>
       </tags>
   </entry>
   <entry>
