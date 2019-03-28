@@ -108,26 +108,22 @@
 
 
 
-  <meta name="description" content="你要吃小饼干吗？一起来呀">
+  <meta name="keywords" content="Angular">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前端一些容易混淆的概念">
-<meta property="og:url" content="http://leiger.me/2017/04/08/前端一些容易混淆的概念/index.html">
+<meta property="og:title" content="Angular Summary(1)">
+<meta property="og:url" content="http://leiger.me/2019/03/27/Angular-Summary-1/index.html">
 <meta property="og:site_name" content="LEIGER">
-<meta property="og:description" content="你要吃小饼干吗？一起来呀">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://leiger.me/images/js_module.jpg">
-<meta property="og:updated_time" content="2017-06-05T15:17:39.000Z">
+<meta property="og:updated_time" content="2019-03-28T02:36:46.966Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端一些容易混淆的概念">
-<meta name="twitter:description" content="你要吃小饼干吗？一起来呀">
-<meta name="twitter:image" content="http://leiger.me/images/js_module.jpg">
+<meta name="twitter:title" content="Angular Summary(1)">
 
 
 
 
 
 
-  <link rel="canonical" href="http://leiger.me/2017/04/08/前端一些容易混淆的概念/"/>
+  <link rel="canonical" href="http://leiger.me/2019/03/27/Angular-Summary-1/"/>
 
 
 
@@ -137,7 +133,7 @@
   };
 </script>
 
-  <title>前端一些容易混淆的概念 | LEIGER</title>
+  <title>Angular Summary(1) | LEIGER</title>
   
 
 
@@ -328,7 +324,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://leiger.me/2017/04/08/前端一些容易混淆的概念/">
+    <link itemprop="mainEntityOfPage" href="http://leiger.me/2019/03/27/Angular-Summary-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="leiger">
@@ -345,7 +341,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">前端一些容易混淆的概念
+          <h1 class="post-title" itemprop="name headline">Angular Summary(1)
               
             
           </h1>
@@ -370,7 +366,7 @@
                 
               
 
-              <time title="Created: 2017-04-08 22:15:43" itemprop="dateCreated datePublished" datetime="2017-04-08T22:15:43-04:00">2017-04-08</time>
+              <time title="Created: 2019-03-27 21:48:30" itemprop="dateCreated datePublished" datetime="2019-03-27T21:48:30-04:00">2019-03-27</time>
             
 
             
@@ -422,21 +418,39 @@
       
 
       
-        <blockquote class="blockquote-center"><p>你要吃小饼干吗？一起来呀</p>
-</blockquote>
+        <blockquote class="blockquote-center"></blockquote>
 <a id="more"></a>
-<h4 id="npm-script"><a href="#npm-script" class="headerlink" title="npm script"></a>npm script</h4><p>这个东西嘛，就是写在<code>package.json</code>文件里面，使用<code>scripts</code>字段定义的脚本文件<br>在我看来就是用于简化一些命令行命令使用，直接使用<code>npm run</code>查询已有的命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    //...</div><div class="line">    &quot;scripts&quot;: &#123;</div><div class="line">        &quot;build&quot;: &quot;node build.js&quot;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure><br>原理：执行时创建一个shell，然后执行shell里的脚本，只要shell中能执行，就可以放到这里来用<br>这个shell比较特别的是，会将<code>node_modules/.bin</code>下的目录加入<code>path</code>变量，这意味着可以直接使用里面的脚本！不必加上路径</p>
-<p>通配符：<code>*</code>任意文件名；<code>**</code>任意一层子目录，防止被转义，要将星号转义<code>\*</code></p>
-<p>执行顺序：<code>$</code>平行执行；<code>$$</code>继发执行</p>
-<p>默认值：<code>npm start</code>:<code>node server.js</code>前提是根目录下有<code>server.js</code>这个脚本；<code>npm install</code></p>
-<p>钩子：就是前后加一个预编译，编译后的状态吧。是<code>public</code>后才有意义？不明觉历</p>
-<p>简写：有4个<code>npm start</code>;<code>npm stop</code>;<code>npm test</code>;<code>npm restart</code></p>
-<p>变量：反正有这个功能23333</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">// 删除目录</div><div class="line">&quot;clean&quot;: &quot;rimraf dist/*&quot;,</div><div class="line"></div><div class="line">// 本地搭建一个 HTTP 服务</div><div class="line">&quot;serve&quot;: &quot;http-server -p 9090 dist/&quot;,</div><div class="line"></div><div class="line">// 打开浏览器</div><div class="line">&quot;open:dev&quot;: &quot;opener http://localhost:9090&quot;,</div><div class="line"></div><div class="line">// 实时刷新</div><div class="line"> &quot;livereload&quot;: &quot;live-reload --port 9091 dist/&quot;,</div><div class="line"></div><div class="line">// 构建 HTML 文件</div><div class="line">&quot;build:html&quot;: &quot;jade index.jade &gt; dist/index.html&quot;,</div><div class="line"></div><div class="line">// 只要 CSS 文件有变动，就重新执行构建</div><div class="line">&quot;watch:css&quot;: &quot;watch &apos;npm run build:css&apos; assets/styles/&quot;,</div><div class="line"></div><div class="line">// 只要 HTML 文件有变动，就重新执行构建</div><div class="line">&quot;watch:html&quot;: &quot;watch &apos;npm run build:html&apos; assets/html&quot;,</div><div class="line"></div><div class="line">// 部署到 Amazon S3</div><div class="line">&quot;deploy:prod&quot;: &quot;s3-cli sync ./dist/ s3://example-com/prod-site/&quot;,</div><div class="line"></div><div class="line">// 构建 favicon</div><div class="line">&quot;build:favicon&quot;: &quot;node scripts/favicon.js&quot;,</div></pre></td></tr></table></figure>
-<h4 id="seajs-requirejs-webpack-browserify"><a href="#seajs-requirejs-webpack-browserify" class="headerlink" title="seajs, requirejs, webpack, browserify"></a>seajs, requirejs, webpack, browserify</h4><p>seajs / require : 是一种在线”编译” 模块的方案，相当于在页面上加载一个 CMD/AMD 解释器。这样浏览器就认识了 define、exports、module 这些东西。也就实现了模块化。<br>browserify / webpack : 是一个预编译模块的方案，相比于上面 ，这个方案更加智能。没用过browserify，这里以webpack为例。首先，它是预编译的，不需要在浏览器中加载解释器。另外，你在本地直接写JS，不管是 AMD / CMD / ES6 风格的模块化，它都能认识，并且编译成浏览器认识的JS。</p>
-<h4 id="gulp-grunt"><a href="#gulp-grunt" class="headerlink" title="gulp, grunt"></a>gulp, grunt</h4><p>这两个都是优化前端工作流程；比如自动刷新页面、combo、压缩css，js、编译less等</p>
-<h4 id="AMD-CMD等"><a href="#AMD-CMD等" class="headerlink" title="AMD, CMD等"></a>AMD, CMD等</h4><p><img src="/images/js_module.jpg" alt="js_module"></p>
-<h4 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h4><p><a href="http://www.ruanyifeng.com/blog/2016/10/npm_scripts.html" target="_blank" rel="noopener">npm scripts使用指南</a></p>
+<p>Angular</p>
+<h3 id="A-Terminology"><a href="#A-Terminology" class="headerlink" title="A. Terminology"></a>A. Terminology</h3><p>AngularJS =&gt; (1.x)<br>Angular =&gt; (2+)</p>
+<hr>
+<h3 id="B-Fundamentals"><a href="#B-Fundamentals" class="headerlink" title="B. Fundamentals"></a>B. Fundamentals</h3><ul>
+<li>Components<ul>
+<li>Data</li>
+<li>HTML Template</li>
+<li>Logic</li>
+</ul>
+</li>
+<li>Modules</li>
+</ul>
+<hr>
+<h3 id="C-Create-a-component"><a href="#C-Create-a-component" class="headerlink" title="C. Create a component"></a>C. Create a component</h3><h4 id="1-steps"><a href="#1-steps" class="headerlink" title="1. steps"></a>1. steps</h4><p>a. File name: courses-1.component.ts <strong>(hyphen)</strong><br>b. class:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">CoursesComponent</span> </span>&#123; &#125; </div><div class="line"><span class="comment">// (pascal naming convention)</span></div></pre></td></tr></table></figure></p>
+<p>c. import decorater:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Component &#125; <span class="keyword">from</span> <span class="string">'@angular/core'</span>;</div></pre></td></tr></table></figure></p>
+<p>d. component decorator function:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">@Component(&#123;</div><div class="line">    <span class="comment">// how this component work</span></div><div class="line">    selector: <span class="string">'courses'</span>, <span class="comment">// &lt;courses&gt;</span></div><div class="line">    template: <span class="string">'&lt;h2&gt;Courses&lt;/h2&gt;'</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>e. Register it in a module<br>f. add an element in an HTML markup</p>
+<h4 id="2-easy-way"><a href="#2-easy-way" class="headerlink" title="2. easy way"></a>2. easy way</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ng g c email <span class="comment">// component</span></div><div class="line">ng g s email <span class="comment">// service</span></div></pre></td></tr></table></figure>
+<hr>
+<h3 id="D-Displaying-Data-and-Handling-Events"><a href="#D-Displaying-Data-and-Handling-Events" class="headerlink" title="D. Displaying Data and Handling Events"></a>D. Displaying Data and Handling Events</h3><p>string interperation: double curely braces<br>property binding: square brackets []<br>attribute binding</p>
+<h4 id="1-adding-bootstrap"><a href="#1-adding-bootstrap" class="headerlink" title="1. adding bootstrap"></a>1. adding bootstrap</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">npm i bootstrap --save</div><div class="line"><span class="comment">// ^4.0.0: major.minor.patch</span></div><div class="line"></div><div class="line">@<span class="keyword">import</span> <span class="string">"~bootstrap/dist/css/..."</span></div></pre></td></tr></table></figure>
+<h5 id="2-style-binding"><a href="#2-style-binding" class="headerlink" title="2. style binding"></a>2. style binding</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">button</span> [<span class="attr">style.backgroundColor</span>]=<span class="string">"isActive ? 'blue': 'white'"</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></div></pre></td></tr></table></figure>
+<h5 id="3-event-binding"><a href="#3-event-binding" class="headerlink" title="3. event binding"></a>3. event binding</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">button</span> (<span class="attr">click</span>)=<span class="string">"onSave($event)"</span>&gt;</span>Save<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">onSave($event) &#123;&#125; // pass event object here</div></pre></td></tr></table></figure>
+<h5 id="4-event-bubbling-prevent"><a href="#4-event-bubbling-prevent" class="headerlink" title="4. event bubbling prevent"></a>4. event bubbling prevent</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">onSave($event) &#123;</div><div class="line">    $event.stopPropagation();</div><div class="line">  ...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h5 id="5-event-filtering"><a href="#5-event-filtering" class="headerlink" title="5. event filtering"></a>5. event filtering</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> (<span class="attr">keyup.enter</span>)=<span class="string">'onKeyUp()'</span>&gt;</span></div></pre></td></tr></table></figure>
+<h5 id="6-template-variables"><a href="#6-template-variables" class="headerlink" title="6. template variables"></a>6. template variables</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> #<span class="attr">email</span> (<span class="attr">keyup.enter</span>)=<span class="string">"onKeyUp(email.value)"</span>&gt;</span></div></pre></td></tr></table></figure>
+<h5 id="7-two-way-binding"><a href="#7-two-way-binding" class="headerlink" title="7. two way binding"></a>7. two way binding</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> [<span class="attr">value</span>]=<span class="string">"email"</span> (<span class="attr">keyup.enter</span>)=<span class="string">"email = $event.target.value; onKeyup()"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> [(<span class="attr">ngModel</span>)]=<span class="string">"email"</span> (<span class="attr">keyup.enter</span>)=<span class="string">"onKeyUp()"</span>&gt;</span></div></pre></td></tr></table></figure>
+<h5 id="8-some-build-in-pipes"><a href="#8-some-build-in-pipes" class="headerlink" title="8. some build in pipes"></a>8. some build in pipes</h5><ul>
+<li>uppercase</li>
+<li>number</li>
+</ul>
 
       
     </div>
@@ -455,6 +469,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Angular/" rel="tag"># Angular</a>
+          
+        </div>
+      
 
       
       
@@ -464,8 +484,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/25/vue-js-1/" rel="next" title="vue.js(1)">
-                <i class="fa fa-chevron-left"></i> vue.js(1)
+              <a href="/2019/01/14/deploy-full-stack-project-into-cloud/" rel="next" title="Deploy full stack project into cloud">
+                <i class="fa fa-chevron-left"></i> Deploy full stack project into cloud
               </a>
             
           </div>
@@ -473,10 +493,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/04/17/JoyReserve-userClient/" rel="prev" title="JoyReserve userClient">
-                JoyReserve userClient <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -709,7 +725,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#npm-script"><span class="nav-text">npm script</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#seajs-requirejs-webpack-browserify"><span class="nav-text">seajs, requirejs, webpack, browserify</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#gulp-grunt"><span class="nav-text">gulp, grunt</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AMD-CMD等"><span class="nav-text">AMD, CMD等</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参考资料"><span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#A-Terminology"><span class="nav-text">A. Terminology</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#B-Fundamentals"><span class="nav-text">B. Fundamentals</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C-Create-a-component"><span class="nav-text">C. Create a component</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-steps"><span class="nav-text">1. steps</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-easy-way"><span class="nav-text">2. easy way</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#D-Displaying-Data-and-Handling-Events"><span class="nav-text">D. Displaying Data and Handling Events</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-adding-bootstrap"><span class="nav-text">1. adding bootstrap</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2-style-binding"><span class="nav-text">2. style binding</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-event-binding"><span class="nav-text">3. event binding</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-event-bubbling-prevent"><span class="nav-text">4. event bubbling prevent</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-event-filtering"><span class="nav-text">5. event filtering</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#6-template-variables"><span class="nav-text">6. template variables</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#7-two-way-binding"><span class="nav-text">7. two way binding</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#8-some-build-in-pipes"><span class="nav-text">8. some build in pipes</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Angular Summary(1)]]></title>
+    <url>%2F2019%2F03%2F27%2FAngular-Summary-1%2F</url>
+    <content type="text"><![CDATA[Angular A. TerminologyAngularJS =&gt; (1.x)Angular =&gt; (2+) B. Fundamentals Components Data HTML Template Logic Modules C. Create a component1. stepsa. File name: courses-1.component.ts (hyphen)b. class:12export class CoursesComponent &#123; &#125; // (pascal naming convention) c. import decorater:1import &#123; Component &#125; from '@angular/core'; d. component decorator function:12345@Component(&#123; // how this component work selector: 'courses', // &lt;courses&gt; template: '&lt;h2&gt;Courses&lt;/h2&gt;'&#125;) e. Register it in a modulef. add an element in an HTML markup 2. easy way12ng g c email // componentng g s email // service D. Displaying Data and Handling Eventsstring interperation: double curely bracesproperty binding: square brackets []attribute binding 1. adding bootstrap1234npm i bootstrap --save// ^4.0.0: major.minor.patch@import "~bootstrap/dist/css/..." 2. style binding1&lt;button [style.backgroundColor]="isActive ? 'blue': 'white'"&gt;&lt;/button&gt; 3. event binding12&lt;button (click)="onSave($event)"&gt;Save&lt;/button&gt;onSave($event) &#123;&#125; // pass event object here 4. event bubbling prevent1234onSave($event) &#123; $event.stopPropagation(); ...&#125; 5. event filtering1&lt;input (keyup.enter)='onKeyUp()'&gt; 6. template variables1&lt;input #email (keyup.enter)="onKeyUp(email.value)"&gt; 7. two way binding12&lt;input [value]="email" (keyup.enter)="email = $event.target.value; onKeyup()"&gt;&lt;input [(ngModel)]="email" (keyup.enter)="onKeyUp()"&gt; 8. some build in pipes uppercase number]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>Angular</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Deploy full stack project into cloud]]></title>
     <url>%2F2019%2F01%2F14%2Fdeploy-full-stack-project-into-cloud%2F</url>
     <content type="text"><![CDATA[Forget to renew… Have to deploy again… A. 管理控制台管理控制台：客户端xshell使用密钥或者账号密码进行连接，还是账号密码方便（得删除密钥才行！！） B. 下载Node.js和nginx, mongodb Node.js nginx所有的配置文件都在 /etc/nginx下，每个虚拟主机安排在/etc/niginx/sites-available下实际的web内容在目录/var/www/html下 MongoDBmongodbsudo service mongod startsudo service mongod restart默认mongodb地址/var/lib/mongodb C. 修改主机名修改linux主机名vim /etc/hostname还得修改vim /etc/host来避免 sudo: unable to resolve host leiger的问题解决方案 端口管理阿里云默认开启的端口不多，自己的node.js3000端口没打开，外网无法访问查看端口调用lsof -i:4000杀端口kill -9 (pid) ctrl+c: 端口被关闭ctrl+z: 后台会运行 pm2更好用npm install pm2 -gpm2 start xxpm2 stop xxpm2 start allpm2 stop allpm2 logpm2 listmv www demo-server 改名字 D. 二级域名部署阿里云服务器上得先添加域名规则先重启nginxnginx -s reload 在导入json文件到mongodb中时，总是出现错误:unreachable server不知道为啥试了各种方法都不行，重启下mongodb就好了…sudo service mongod restart还得注意下数据库名称，名称应该为vue_mall而不是vmall https的话阿里云之前申请过了，这次只要下载证书和密钥就可以了得在nginx上配置才行配置主要代码123456789101112131415server &#123; listen 443 ssl; server_name vmall.leiger.tech; ssl_vertificate /etc/nginx/conf.d/vmall/vmall.pem; ssl_certificate_key /etc/nginx/conf.d/vmall.key; ssl_protocols TLSv1 TLSv1.1 TLSv1.2; root /var/www/vmall; index index.html location /users/&#123; proxy_pass http://127.0.0.1:3000/users/; &#125;&#125; E. http转https还得http强制转https, http没备案会被墙…强制https访问最简单的方式就是将所有的http请求通过rewrite重定向到https即可]]></content>
