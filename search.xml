@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Photoshop - 抠图篇]]></title>
+    <url>%2F2019%2F04%2F23%2FPhotoshop-%E6%8A%A0%E5%9B%BE%E7%AF%87%2F</url>
+    <content type="text"><![CDATA[抠抠抠… 抠图方法 选区：多边形工具，套索工具等 形状选区 按shift或alt 套索工具 可进行拓展和收缩 魔棒工具 连续和容差 快速选择工具 中括号 或者alt+鼠标右键 调整画笔大小 混合模式抠图，可结合蒙版 渐变 色彩范围抠图 -&gt; 图层样式 对阴影和高光进行控制，抠取天空不错，调整颜色也不错，按shift进行多选 快速蒙版涂抹抠图，涂完按Q键退出，再新创建一个蒙版 动物毛发：选大致范围选出来-&gt;选择调整边缘来净化颜色和边缘 焦点区域 会帮我们自动选择 钢笔抠图 -&gt; 路径 加载选区 通道和alpha通道 选择合适的通道，ctrl+i反向选择，ctrl+l选择色阶调整，再用柔光画笔进行调整（黑色画笔加强黑色，白色画笔加强白色），还可以用不透明度进行柔化调整 可通过计算，对多颜色通道进行混合叠加，再调节色阶 抠图之后 优化抠图选区结果 调整边缘 使用选择-&gt;修改-&gt;拓展等方法 平滑：用于在每个所选像素周围搜索指定颜色范围内的其他像素，并选择这些像素 在蒙版中进行颜色填充 ctrl+点击蒙版加载选区，shift开启关闭蒙版 画笔工具细节涂抹 修复选区 使用编辑-&gt;填充-&gt;内容识别 方式自动完成；可多次进行优化结果：shift+F5 颜色校正工具 色阶曲线等 高级工具 透视裁剪 抠图技巧 反选 选择-&gt;变换选区，右键，斜切扭曲等其他操作 选中后按Q键直观查看选区，可在快速蒙版中选择颜色和色彩指示变换 鼠标+空格键移动画布 抠图之后创建形状等可以通过调整不透明度制作影子 给蒙版填充颜色，或者在一个通道中添加选区方式添加]]></content>
+      <categories>
+        <category>photoshop</category>
+      </categories>
+      <tags>
+        <tag>抠图</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[DragEvent & HTML DOM Audio Object]]></title>
     <url>%2F2019%2F04%2F07%2FDragEvent-HTML-DOM-Audio-Object%2F</url>
     <content type="text"><![CDATA[Every Elements can be Drag&amp;Drop A. DragEvent W3School DragEvent ObjectJavaScript拖放（Drag-Drop) 1. Set Elements to be draggedBy default, img, a and text are draggable1&lt;img draggable="true"&gt; 2. Drag what? - dragstart &amp; setData()1234567trackHolder.forEach(icon =&gt; &#123; icon.addEventListener('dragstart', function(e) &#123; console.log('you drag me'); // e.target.id === this.id e.dataTransfer.setData('Text', this.id); &#125;);&#125;); 3. Drag to where? - dragover1234box.addEventListener('dragover', function(e) &#123; e.preventDefault(); console.log('dragged over me');&#125;, false); 4. Put the element - drop123456789101112// dropbox.addEventListener('drop', function(e) &#123; // preventDefault() to prevent broswer default event (open as a link) e.preventDefault(); console.log('you can drop!'); // show the icon in the right let icon = e.dataTransfer.getData('Text'); // target vs currentTarget // append the data e.currentTarget.children[1].appendChild(document.querySelector(`#$&#123;icon&#125;`));&#125;, false); B. HTML DOM Audio Object1. Basic Usage123456789101112131415let toggleAudio = (audio) =&gt; &#123; if (audio.paused) &#123; audio.play(); &#125; else &#123; audio.pause(); &#125;&#125;let switchAudioTrack = (audio, source) =&gt; &#123; if (!audio.src.includes(source)) &#123; audio.src = `audio/$&#123;source&#125;`; audio.load(audio); &#125; toggleAudio(audio);&#125; 2. ErrorUncaught（in promise）DOMException Chrome by default is not allowed to autoplay Bind a user action to solve this problem]]></content>
@@ -265,9 +276,9 @@
         <category>blog</category>
       </categories>
       <tags>
-        <tag>github</tag>
-        <tag>coding</tag>
         <tag>domain</tag>
+        <tag>coding</tag>
+        <tag>github</tag>
       </tags>
   </entry>
   <entry>
@@ -280,9 +291,9 @@
       </categories>
       <tags>
         <tag>hexo</tag>
-        <tag>git</tag>
-        <tag>github</tag>
         <tag>coding</tag>
+        <tag>github</tag>
+        <tag>git</tag>
       </tags>
   </entry>
   <entry>
