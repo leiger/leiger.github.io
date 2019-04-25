@@ -276,9 +276,9 @@
         <category>blog</category>
       </categories>
       <tags>
-        <tag>domain</tag>
-        <tag>coding</tag>
         <tag>github</tag>
+        <tag>coding</tag>
+        <tag>domain</tag>
       </tags>
   </entry>
   <entry>
@@ -291,9 +291,9 @@
       </categories>
       <tags>
         <tag>hexo</tag>
-        <tag>coding</tag>
-        <tag>github</tag>
         <tag>git</tag>
+        <tag>github</tag>
+        <tag>coding</tag>
       </tags>
   </entry>
   <entry>
